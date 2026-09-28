@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <script src="script.js" defer></script>
+  <title>Katie Barton</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="rainbow-stripe"></div>
+
+  <div class="nav-container">
+    <div class="navbar">
+      <ul class="nav-list-container">
+        <li style="list-style: none;"><span id="clock"></span></li>
+        <li class="navbar-list-item"><a class="navbar-list home-tab" href="index.html">HOME</a></li>
+        <li class="navbar-list-item"><a class="navbar-list design-tab" href="index.html#design">DESIGN</a></li>
+        <div class="image-container"><a href="index.html">
+          <img src="images/logo.png" alt="Logo Hollow" class="logo-base">
+          <img src="images/logo-filledin.png" alt="Logo Filled-in" class="logo-hover">
+        </a></div>
+        <li class="navbar-list-item"><a class="navbar-list writing-tab" href="index.html#writing">WRITING</a></li>
+        <li class="navbar-list-item"><a class="navbar-list about-tab" href="about.html">ABOUT</a></li>
+        <li class="navbar-list-item"><a class="navbar-list email-tab" href="mailto:katiebarton4455@gmail.com">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <br><br><br>
+    <h5>RESEARCH</h5>
+    <h4>GENSHIN IMPACT: How to Craft the Most Profitable Gacha System</h4>
+    <br><br><br>
+    <h1>FIX TS BRO</h1>
+    <br><br>
+    <h5>ABSTRACT</h5>
+    <p>Gacha (deriving from the Japanese term, gashapon) is a gaming system that allows players to gamble for
+      characters, weapons, upgrades, or other items through microtransactions (in-game purchases) which is heavily
+      popularized in Asian gaming communities. While these types of games tend to have small, niche audiences,
+      especially in the West, Genshin Impact has broken this tradition by becoming the most popular and most financially
+      successful gacha in a matter of months, even surpassing many triple-a games (large games released by major
+      publishing companies) in terms of users and revenue. This study aims to determine the cause of Genshin Impact’s
+      unparalleled success by diving deep into its gacha system and comparing it to the systems of other popular, yet
+      less successful titles: Fate/Grand Order, Honkai Impact 3rd, Fire Emblem Heroes, Arknights, and AFK Arena. Each of
+      these games' respective gacha systems were analyzed for their maximum amount of payment needed (yet still most
+      cost-effective) to obtain a best ranked character, as well as determining the least amount of characters users can
+      obtain while remaining F2P (free to play). These aspects were then analyzed in order to determine what trends
+      within Genshin Impact’s gacha system prove to be the most profitable.
+      <br><br><b>Keywords:</b> Genshin Impact, miHoYo, HoYoverse, video games, mobile games, game design, gacha, gacha
+      system, loot boxes, in-game transactions, microtransactions, F2P, free to play, freemium
+    </p><br>
+    <h5>INTRODUCTION AND LIT REVIEW</h5>
+    <h6>Shift to Microtransactions</h6>
+    <p>Since the mid-2000’s, paying for video games has been dramatically altered (Zendel, et al., 2020). Initially,
+      video games were bought as a finished product,with one set price, in the form of discs for consoles or coin-op
+      arcade games (Roessel and Švelch, 2021). However, as technology progressed and allowed people to pay for products
+      digitally, microtransactions emerged. Microtransactions allow players to obtain power-ups, cosmetics, characters,
+      weapons, additional content, or other in-game items from directly inside the game to alter the look or feel of
+      their experience (Tirtasamita, 2020). Since their development, microtransactions have exploded in popularity and
+      have quickly become one of the main sources of revenue for developers within the gaming industry, especially
+      within the realm of mobile gaming (Reza, et al., 2018). According to a 2018 study conducted by Superdata, the
+      digital video game industry earned $119.6B, with $35.7B or 30.0% from PC games, and $12.7B or 10.6% from console
+      games, and $61.3B or 51.2% corresponding to purchases from mobile games (Superdata, 2019). Of this 51.2%, the
+      highest earning mobile games were all games that presented themselves as free but featured additional content
+      through the purchase of microtransactions, otherwise known as “freemium” (Camerero, et al., 2021). The abundance
+      of these freemium games eventually became so popular that Apple opted to change the purchase button from “free” to
+      “get” (Brian, 2014).
+    </p><br><br>
+    <h6>Genshin Impact's Rise to Fame</h5>
+      <p>Genshin Impact’s parent company, HoYoverse, founded in 2012 by three graduate students from Shanghai Jiaotong
+        University (HoYoverse, 2022) is responsible for the creation of Genshin Impact. They started off as a small
+        indie developer called miHoYo, from 2012 to 2014, and frequently teetered on the edge of bankruptcy (HoYoverse,
+        2022). Eventually, their team finally found a fit with Honkai 2, their biggest change being shifting to the
+        gacha model. While it didn’t gain much traction in the West, the game easily became a top-10 grossing title in
+        China (HoYoverse, 2022). However, it wasn’t until September 2020 when miHoYo would release Genshin Impact.
+        <br>Genshin Impact is an anime-inspired action role-playing gacha game released on mobile (iOS and Android), PC,
+        and Playstation. The game takes place in the magical world of Teyvat, home to seven distinct nations tied to
+        different elements and gods. The story follows a character known as the Traveler who travels across Teyvat’s
+        seven nations in search for their lost twin sibling. The game started its development in 2017 and was released
+        for iOS, Android, Playstation 4, and PC on September 28, 2020 (King, 2021). It was later released for
+        Playstation 5 in April 2021 and is currently preparing for its eventual release to the Nintendo Switch and
+        Steam.
+      </p><br><br>
+      <h6>The Gacha System</h5>
+        <p>The structure of freemium games widely differs among regions, especially within Western and Eastern markets.
+          Whereas Western games have relied on methods such as lootboxes, the most profitable freemium system for games
+          in the East (specifically Japan) is the utilization of gacha (Lax & Mackenzie, 2019). While they function
+          similarly to microtransactions in the West, gacha systems make it so players have to gamble using random
+          number generators (RNG) for their virtual rewards using real money. They also differ in their rewards. Whereas
+          most Western games offer cosmetic items like skins, dances, and weapons, most gacha games offer characters or
+          weapons that alter aspects of core gameplay (Koeder & Tanaka, 2017). The gacha system soon became a staple of
+          Japanese gaming, and slowly grew more popular throughout Asia, only being popular in the West among very small
+          and niche communities (Lax & Mackenzie, 2019).
+          <br><br>The gacha system has its roots in the gashapon model, a type of vending-machine in Japan that would
+          dispense toys for children (Yuen-Ki, 2019). Because of the toys being dispensed on a purely random vending
+          machine, children had to rely on luck to obtain the specific toy they wanted. Modeled after these dispensers,
+          the gacha system requires players to obtain a virtual currency in order to obtain a character or item
+          dispensed at random (Fujihara & Shibuya, 2020). The virtual currency required for these transactions can be
+          obtained in two different ways (Yuen-Ki, 2019). Typically in gacha games, there are many ways to obtain
+          virtual currency for free, whether it be via gameplay, sharing or promoting the game, or participating in
+          events; however, these ways of gaining in-game currency are typically slow. That is why gacha games also offer
+          users a second option: microtransactions. The gacha model is best summarized by Figure 1.1 below:
+        </p><br><br>
+        <p>The explosion of Genshin Impact is unlike anything the Gacha Industry has ever seen before. Only six months
+          after its initial release, Genshin Impact generated over $1 billion in just mobile spending. For comparison,
+          it took the mobile game sensation Pokémon Go nine months to reach $1 billion, and 11 months for Clash Royale
+          (Sensor Tower Intelligence, 2020). This easily led it to Genshin Impact becoming the fastest growing title in
+          the App Store, easily becoming the most popular gacha title by a considerable margin. (Sensor Tower
+          Intelligence, 2020). It led global gaming conversations throughout the 2020s, becoming the most talked about
+          game on Twitter of 2021. Genshin Impact managed to edge out global sensation Wordle (King, 2022), and surpass
+          triple-a titles such as Apex Legends, Final Fantasy, Animal Crossing, Minecraft, and Fortnite (Mazanko, 2022).
+          By the end of 2021, the game was estimated to have an audience of over 17 million on mobile devices alone
+          (King, 2021). The game also earned countless awards, such as “iPhone Game of the Year” in the App Store Best
+          of 2020; the 2021 Apple Design Awards for Visuals and Graphics; Google Play’s “Best Game of 2020”; Tap Tap
+          Game Awards 2020’s “Game of the Year”, and was nominated for “Best Mobile Game” and “Best RPG Game” at The
+          Game Awards 2020 (Sahbegovic, 2021). In this paper, I aim to find out what allows Genshin Impact to generate
+          so much more revenue in comparison to its competitors by examining which specific design tactics most affect
+          the likelihood of user spending on microtransactions?
+        </p><br>
+        <h5>METHODOLOGY</h5>
+        <p>This study aims to determine what aspects of Genshin Impact make purchasing microtransactions most desirable
+          through the lens of Genshin Impact. This study is also heavily based on the model provided in Yuen-Ki’s study,
+          Consumer Motivation in Gacha-Based Mobile Gaming, which defines the gacha system (Figure 1.1). I will use a
+          three-step, mixed method, correlational study, utilizing both quantitative and qualitative analyses to conduct
+          this research and measure user response. The three key steps are in the following order: Character Revenue and
+          Popularity Analysis; Character Cost Comparison; and Analysis of Provided F2P Opportunities.
+          <br><br>Additionally, I will take all the data collected from my in-depth analysis of Genshin Impact’s core
+          game design and compare them to those of similar titles in order to properly deduce how this game stands out
+          among other gacha games. For the games I’ve decided to compare it to, I wanted to make sure the gacha titles
+          were deemed successful, with gacha systems and communities similar to those of Genshin Impact. Therefore, I
+          made sure to create a criteria for the games I wanted to look at to make sure my analysis would help me
+          produce the best results possible. This criteria is as follows:
+        </p><br>
+        <ul>
+          <li class="paragraph-list">Have a gacha system implemented as the main source of getting characters</li>
+          <li class="paragraph-list">Operate on a mobile platform, or at least have mobile as an option</li>
+          <li class="paragraph-list">Earned at least $20M within a year</li>
+        </ul>
+        <br>
+        <p>Using this criteria, the gacha titles I’ve decided to analyze for my comparison are: Fate Grand/Order, Honkai
+          Impact 3rd, Fire Emblem Heroes, and Arknights.
+          <br><br>My first step, Character Revenue and Popularity Index, will look at each of the featured characters
+          across updates 1.0 to 2.5 and look at how much revenue each of them earned. I will also be observing each of
+          these characters’ Google keyword search volume throughout this time to correlate with their revenue. My second
+          step, Character Cost Comparison, will calculate the required USD spent in Genshin Impact’s gacha system to
+          earn a character and compare this to the costs of other titles. My third and final step, Analysis of Provided
+          F2P Opportunities, will deduce how much worth a player can earn from Genshin Impact and their competitors if
+          they never engage in microtransactions and play them for free.
+        </p><br><br>
+        <h6>Character Revenue and Popularity Index</h6>
+        <p> In this study, I will be constructing a data table analyzing the amount of revenue earned per featured 5
+          star character in Genshin Impact. However, one such limitation of this study is that it’s near impossible to
+          determine how much of this money corresponds directly to current featured character(s). While most in-game
+          purchases in Genshin Impact occur when trying to roll for a character (Puyat, 2021), there are other items
+          players can buy within Genshin Impact, such as skins and starter bundles of other in-game items. In an effort
+          to counteract this, I’ve also included a percentage comparing the revenue earned in the first two days to the
+          total. Typically, if a player is waiting and saving up money to spend on a specific up-coming character
+          banner, they generate a lot of excitement and anticipation surrounding their release, causing them to spend as
+          soon as the new character drops. This is further supported by the fact that in the first two days that a
+          character banner is released, the featured character’s name typically trends on Twitter as users share their
+          rolls and discuss gameplay (Mazanko, 2022). Many streamers also film themselves purchasing and using rolls in
+          the first few days of a new character's release. Therefore, I can deduce that if a substantial amount of the
+          total revenue earned during a character’s banner is earned in the first few days of a character’s release,
+          that revenue was likely earned by users who wanted that character.
+        </p><br><br>
+        <h6>Character Cost Comparison </h6>
+        <p>In this section of my data collection, I will be observing how Genshin Impact utilizes its gacha system in
+          comparison to other titles. As mentioned in my introduction and shown in Figure 1.1, a key aspect of the gacha
+          system is how real currency is transferred in virtual currency, which is then exchanged for a chance to gamble
+          for weapons and characters. Genshin Impact doesn’t stray away from this model and in fact smothers users with
+          multiple different currencies that can be exchanged for use of the gacha system. These include Genesis
+          Crystals, Primogems, Intertwined Fates, and Acquaint Fates, with the main source of currency being Primogems.
+          Refer to Figure 2.1 for a more in-depth look at the relationship of these currencies.
+          <br><br>This stage will be dedicated to equating the in-game value of these currencies to their real-world
+          value. I will also be analyzing the probability of the gacha system itself, as well as the gacha systems of
+          its competitors, utilizing the two equations in Figure 2.2. Using these equations, I will be able to deduce
+          the maximum amount of roll it would take to obtain an item, conclude the average real-world cost of these
+          items and compare the costs across each of the games.
+        </p><br><br>
+        <h6>Analysis of Provided F2P Options</h6>
+        <p>In this section of my data collection, I will be expanding upon my delve into Genshin Impact’s gacha system
+          conducted in the previous section. As shown in Figure 1.1, microtransactions aren't the only way players can
+          obtain virtual currency to spend on the gacha system. Players can also gain this currency through completion
+          of story, gameplay challenges, events, exploration of the world, and many other factors that don’t require any
+          real-life transactions. However, the value players gain through these F2P methods not only differs between
+          each game, but is also generally unknown.
+          <br><br>Therefore, I will tally each instance where you can earn F2P currency in the time frame of Genshin
+          Impact’s release: September 28, 2020, to the end of the latest full release, March 30, 2022, for each game. I
+          will then add them up to see the maximum amount of earnable currency, the maximum number of rolls players can
+          buy with earned currency, and the least amount of best-ranked characters players can earn with that currency
+          amount. I will also be taking into account the types of F2P methods these games offer. They will be separated
+          into two main categories: one-time options, F2P options with only one reward, and time-based options, F2P
+          options with multiple rewards stretched out over time.
+        </p><br>
+        <h5>HYPOTHESIS</h5>
+        <p>Based on my previous research and my own experiences with Genshin Impact, I created a hypothesis that the
+          main contributor to Genshin Impact’s massive success in comparison to other gacha games is its large amounts
+          of F2P currency and lower probability rates in comparison to other gacha games.
+          <br><br>One of the main draws toward Genshin Impact is its massive shift in gameplay compared to other gachas.
+          The open-world format that Genshin Impact adopts is most commonly seen in triple-A games, but rarely in mobile
+          platforms (Wen, 2020). This gameplay format allows Genshin Impact to provide variety in earnable F2P currency,
+          by tying them to exploration of new regions, unlocking chests, finding enemies spawn naturally in the world,
+          or by uncovering ancient history. This format also allows players to explore these elements at their own pace.
+          I believe this leads to a large amount of F2P earnable currency for players, allowing HoYoverse to employ the
+          Reciprocation Effect. This is one of the most prominent strategies across these freemium games (Farrell,
+          2014). This strategy uses the psychological effect of reciprocation, the feeling of wanting to pay back one’s
+          kind deeds with kind deeds of their own, by trying to have their games be as “kind” and “generous” to their
+          players as possible (Nataraj, 2019). Developers achieve this by making their game seem free and depicting
+          themselves as small, down-to-earth, and relatable as they can. This causes the user to subconsciously see the
+          game being sold for free as an “innately friendly and pleasant action” (Farrell, 2014), compelling them to
+          reciprocate with a friendly action of their own, like purchasing microtransactions. I believe that Genshin
+          Impact employs this tactic through their mass amount of F2P-earnable currency and attempts to use this to
+          cover up how much currency is actually needed to obtain a character due to their low base probability and high
+          roll cost, or in other words, utilize the common tactic of price shrouding (Shulman & Geng, 2019).
+        </p><br>
+        <h5>RESULTS</h5>
+        <h6>Character Revenue and Popularity Index</h6>
+        <p> The table below shows the amount of revenue earned correlating with each limited character banner. The table
+          shows the initial revenue earned in the first two days, and the total amount earned throughout the course of
+          their banner. Other aspects of the character are also listed for further consideration, such as gender, weapon
+          type, and element, and role in a team composition. The potential roles are DPS, DPS/Sub-DPS, Support,
+          Shielder, and Healer. Main DPS (or damage per second) is defined as the team’s main damage dealer, the Sub-DPS
+          is defined as the secondary damage dealer for when the Main DPS is downed or on a cooldown timer, the Support
+          is someone who helps increase the DPS’s damage output, the Shielder is someone who provides a shield so the
+          characters take less damage, and the Healer is someone who heals the other characters when they take damage.
+        </p><br><br>
+        <h1>INSERT TABLE HERE</h1>
+        <br><br>
+        <h6>Character Cost Comparisons</h6>
+        <p>Below is a series of tables comparing the costs in USD of any top-ranked character and a specifically
+          featured top-ranked character across these games' gacha banners. The numbers displayed are the costs of a 100%
+          guarantee (or at least a 99% chance for games that don’t have guarantees) of obtaining said character or item.
+          These tables will also take into account the methods of pay these games provide, since many feature different
+          prices. Additionally many of these games rely on time to earn their prices. Therefore, their costs per roll
+          also show the amount of days needed to earn said currency. After the tables, there is a graph showing the base
+          probabilities for each of these games without soft pity or guarantees in order to show the chances of earning
+          a character before these systems come into play.
+        </p><br><br>
+        <h1>INSERT TABLE HERE</h1>
+        <br><br>
+        <h6>Analysis of Provided F2P Options</h6>
+        <p>Although these games generate most of their revenue from in-game purchases, they aren’t required in order to
+          play the game or even participate in the gacha system. This is because these games offer ways for players to
+          gain in-game currencies through actions within the game itself. These actions are split into two main
+          categories: those that require consistent gameplay day after day, and those that are one-time opportunities.
+          All numbers collected are from personal records of gameplay experience, corroborated with the games’ own
+          websites and Wikipedia pages.</p><br><br>
+        <h1>INSERT TABLES HERE</h1><br>
+        <h5>DISCUSSION</h5>
+        <p>This study initially hypothesized that the biggest contributors to Genshin Impact’s lead in profit would be a
+          result of their large amount of F2P-earnable currency and low base probability. While the data I’ve collected
+          does support this hypothesis, what I’ve discerned to be the most contributing factors diverts quite
+          drastically from my original ideas.
+        </p><br><br>
+        <h6>Character Revenue Index</h6>
+        <p>The most popular team role proves to be Main DPS with a total revenue of $151,523,764 and an average of
+          $16,835,973.80 per character. The least popular was DPS/Sub-DPS with a total revenue of $88,699,145 and
+          average of $11,087,393.13 per character. Females proved to be significantly more popular than males, with an
+          average of $15,456,601.78 per female character compared to $13,644,902.36 per male character. The most popular
+          weapon type was polearm with a total revenue of $126,699,280 and an average of $18,095,611.43 per character.
+          The least popular was sword with a total revenue of $47,580,023 and an average of $11,895,005 per character.
+          Finally, the most popular element type in terms of average revenue was electro, earning an average of
+          $19,212,322.30 per character. However, electro was also the element with the least amount of featured 5 star
+          characters. Therefore, I’m also taking into account the most popular element in terms of total revenue, which
+          was pyro with a total revenue of $76,078,964. The least popular element was hydro, with a total of $35,217,477
+          and an average of $8,804,369.25. According to these trends along the data, we can assume that the highest
+          performing character would be a character who is female, a main DPS, uses either the electro or pyro element,
+          and wields a polearm. Interestingly enough, this description matches two of the best performing characters in
+          the game, Hu Tao, who had the third highest earning banner, and the Raiden Shogun, who had the highest. Even
+          when removing their revenues from the total before calculating the averages, the data still remains the same.
+          Therefore, we can conclude that the best performing characters being female, a main dps, a polearm, with an
+          electro or pyro element.
+          <br><br>However, according to the differences in revenue within the data, one of the biggest determinants of a
+          character’s success is being a female main DPS. While the other factors such as weapon type and element type
+          do have an effect on a character’s performance, the differences between them aren’t as drastic as changes in
+          team role or gender. This correlates with much of the prior research done surrounding gacha games in the past.
+          In Lax and Mackenzie’s study of Desire and Monetization in Japanese Mobile Games, they defined a player’s want
+          of a specific character as an “excessive parasocial desire” (Lax & Mackenzie, 2019). Additionally, it’s been
+          reported that 55% of Genshin Impact players are male and the average age is 35 years old (Knezovic, 2021). We
+          can then assume that the popularity of these characters is fueled by a parasocial sexual desire. Video games
+          are often renowned for their aspect of escapism, and gacha games even more so.
+        </p><br><br>
+        <h6>Character Cost Comparisons</h6>
+        <p>The data revealed in this section of my study seemed to most closely resemble my initial hypothesis. Out of
+          all of the games listed, Genshin Impact did prove to have the lowest base probability rate of 0.6%. However,
+          the data also showed that they simultaneously managed to have one of the lowest roll requirements for a
+          guarantee at 90 rolls. The significance of these two accomplishments occurring within the same system seems
+          insignificant until plugging Genshin Impact’s base probability into the cumulative probability formula,
+          ignoring guarantees and soft pity. At 90 rolls, Genshin Impact would have a 41.8% chance of receiving a 5 star
+          character, which compared to the other games at their guaranteed number of rolls (excluding F/GO), is the
+          lowest chance given. This means that the numbers presented in Genshin Impact’s gacha system appear to be much
+          more controlled than the other games in comparison. The lower probability given to players before soft pity
+          activates, ensures that they are much more likely to rely on the guarantee, and less likely to receive their
+          wanted character early for less money.
+        </p><br><br>
+        <h6>Analysis of Provided F2P Options</h6>
+        <p>It is clear that Genshin Impact didn’t prove to have the most offerable F2P currency out of all the options,
+          and instead ranked 4th most, being behind Arknights, AFK Arena, and Honkai Impact 3rd, respectively. However,
+          when we analyze this data in terms of guaranteed characters earnable through F2P, Genshin Impact jumps from
+          4th to 2nd. This means that while Genshin Impact may not provide the most F2P currency, the amount of currency
+          it still offers proves to have a significant amount of value. My initial hypothesis of this currency also
+          being earned through open-world gameplay, such as exploration, proved itself to be false. Instead, a majority
+          of this currency is earned through time-based opportunities. This in turn urges users who wish to remain F2P
+          to log-in more frequently in comparison to other gacha titles. This is a common tactic used in many games, and
+          when paired with the added time pressure of limited banners, events, and other in-game items can lead towards
+          a higher rate of addiction among players. This makes them more susceptible to irresponsible spending (Schöber
+          & Stadtman, 2020).
+        </p><br>
+        <h5>CONCLUSION</h5>
+        <h6>Limitations and Future Discussions</h6>
+        <p>Due to the nature of Genshin Impact, there is a possibility that this research could be refuted by the next
+          update and need to be replicated. Genshin Impact is a massive game that is constantly updating, and changes
+          can be made to its system at any point in time. Additionally, Genshin Impact is still in very early stages of
+          production. Their open world currently features only 3 main regions—Mondstadt, Liyue, and Inazuma—yet there
+          are 5 more still in development—Sumeru, Natlan, Fontaine, Sneznyha, and Khaenriah (Fandom Wiki, 2022). Many of
+          the games that Genshin Impact was compared to have already finished their main storylines and are uploading
+          content to their games at either a much slower pace, or more minimally overall.
+          <br><br>Another limitation that presented during my research is the niche nature of gacha games, especially in
+          the West. This made it especially difficult to gather data relating to this subject. Many of the papers,
+          theses, and journals I sourced during my research process are based in Eastern countries such as Japan, China,
+          or Korea. As someone who is based in America and only knows how to read and write in English, I had to rely on
+          the limited studies available in English and related studies on similar Western games covering loot boxes and
+          American mobile apps.
+          <br><br>Since a lot of research on the gaming community, nonetheless the gacha gaming community is very
+          limited in the Western world, this study can serve as a starting point for many areas of future research. One
+          of the biggest questions I encountered while conducting my literature review was: How do the marketing
+          strategies of these games affect their success? Many gacha games manage to build a majority of their audience
+          through social media advertisements and influencer sponsorships. Yet, a lot of these advertisements and
+          sponsorships follow different terms. Some sponsorships require a video influencer to discuss the game in the
+          beginning of their video, while others may require them to actually play the game or make a full video
+          dedicated to their game. Some games such as AFK Arena even put the influencer they sponsored into the game as
+          their own obtainable character (Gregson-Wood, 2020). Social Media ads tend to be even more varied, with ads
+          ranging from gameplay footage, to scripted commercials, to animated cutscenes (Genshin Impact, n.d.).
+          Therefore, many studies could be conducted analyzing these marketing strategies, and deducing which ones
+          generate the most revenue. Other studies may also be done to address many of the limitations presented in this
+          study, by analyzing the changes in Genshin Impact past the 2.5 update or comparing them to newer games that
+          plan to be released, such as HoYoverse’s future title, Honkai: Star Rail.
+        </p>
+        <br><br>
+        <h6>Implications</h6>
+        <p>Genshin Impact has swept across the West like no other gacha game, and while this sounds like a commendable
+          achievement on the surface, the ignorance surrounding the gacha genre makes this feat quite dangerous to
+          consumers. As mentioned in Yuen-Ki’s in-depth study surrounding the gacha system, it’s defined as using
+          virtual currency to spend on in-game items with a specific probability of being earned (Figure 1.1). While
+          this currency can be earned through gameplay, this is somewhat limited in comparison to the purchase of them
+          through real-world currency, especially considering the game’s added time pressure through the existence of
+          update patches and character banners. This system shares many qualities with the real world concept of
+          gambling or lottery (Koeder & Tanaka, 2017). However, gacha titles, including Genshin Impact, are not marketed
+          as such. Genshin Impact has seen immense publicity in the past year and a half, as advertising campaigns on
+          YouTube totaled 880 million views (Genshin Impact, n.d.). They’ve also conducted a multitude of sponsorships
+          with YouTubers and social media influencers with thousands of followers (Khan, 2020), earning their own
+          category on Twitch with an average user base of over 12,000 (TwitchTracker, 2022). Furthermore, in the Western
+          world, many government regulations exist surrounding gambling and lottery systems, including age limits,
+          however, gacha games such as Genshin Impact are not regulated as such.
+          <br><br>Based on the results presented in this study, it can be confirmed that Genshin Impact places heavy
+          emphasis on consistent daily gameplay. This has already been observed in many gacha games before such as
+          Fate/Grand Order. In 2018, the Wall Street Journal published an article about a Japanese man who spent over
+          $70k while playing (Epstein & Inada, 2018). However, Fate/Grand Order not only garners a lot of their fanbase
+          from Eastern audiences, but the game is also based on the anime franchise, Fate, which has a large majority of
+          its viewers comin from Japan (Statista, 2020). This means that a majority of the players of Fate/Grand Order
+          are already familiar with the anime genre, and most likely gacha games. Genshin Impact differs from this since
+          the story presented in their game is original, meaning that word of mouth can only stem from advertisements,
+          and with advertisements appearing so commonly throughout social media, it’s not guaranteed that everyone would
+          be well-versed with the dangers associated with the genre. Therefore, studies such as this become essential
+          for less-informed consumers, since the only way for games such as Genshin Impact to take advantage of their
+          users is for them to not know any better.
+        </p><br>
+        <h5>REFERENCES</h5>
+        <p>Alonso, K., & Jigvall, E. (2018). (thesis). Thinking Outside the Lootbox : Balancing on the Scale of Gacha.
+          Retrieved October 19, 2021 from http://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-355652.
+          <br><br>Askelöf, P. (2013). Monetization of Social Network Games in Japan and the West. Retrieved October 19,
+          2021 from
+          https://www.semanticscholar.org/paper/Monetization-of-Social-Network-Games-in-Japan-and-Askel%C3%B6f/17c7618255d174001b3429e5fc912876113efa6f.
+          <br><br>Batchelor, J. (2021, September 30). Genshin impact mobile generates $2bn in first year.
+          GamesIndustry.biz. Retrieved April 23, 2022, from
+          https://www.gamesindustry.biz/articles/2021-09-30-genshin-impact-mobile-generates-usd2bn-in-first-year#:~:text=On%20iOS%20alone%2C%20the%20game,by%20Pokemon%20Go%20and%20Robox.
+          <br><br>Brian, M. (2021, May 13). Why app store apps are now labeled 'get' instead of 'free'. Engadget.
+          Retrieved April 8, 2022, from https://www.engadget.com/2014-11-20-apple-switches-free-get-app-store.html.
+          <br><br>Camarero, C., San José, R., Jiménez, N., & San-Martín, S. (2021). The effect of use, overuse, and
+          appeal of mobile game app on add-ons purchases and players recruitment. Journal of Organizational and End User
+          Computing, 33(2), 59–84. https://doi.org/10.4018/joeuc.20210301.oa4.
+          <br><br>Chapple, C. (2020). Genshin impact races past $1 billion on mobile in less than six months. Sensor
+          Tower Blog. Retrieved October 21, 2021, from https://sensortower.com/blog/genshin-impact-one-billion-revenue.
+          <br><br>Epstein, D., & Inada, M. (2018, March 15). Meet the man who's spent $70,000 playing a mobile game. The
+          Wall Street Journal. Retrieved April 26, 2022, from
+          https://www.wsj.com/amp/articles/meet-the-man-whos-spent-70-000-playing-a-mobile-game-1521107255.
+          <br><br>Farrell, J. (2017, December 7). The fascinating psychology behind free-to-play mobile App Games.
+          HuffPost. Retrieved October 21, 2021, from https://www.huffpost.com/entry/the-fascinating-psycholog_b_6076502.
+          <br><br>Fujihara, M., & Shibuya, A. (2020). How is the Gacha System Reported on in Japan? Digra. Retrieved
+          April 8, 2022, from
+          http://www.digra.org/digital-library/publications/how-is-the-gacha-system-reported-on-in-japan/.
+          <br><br>Genshin Impact (n.d.). About [YouTube Channel]. YouTube. Retrieved April 26, 2022 from
+          https://youtube.com/c/GenshinImpact.
+          <br><br>Genshin impact - twitch statistics and charts. TwitchTracker. (2022). Retrieved April 26, 2022, from
+          https://twitchtracker.com/games/513181.
+          <br><br>Genshin Impact Live Player Count and Statistics. The Game Statistics Authority. (2022, February 12).
+          Retrieved April 12, 2022, from https://activeplayer.io/genshin-impact/.
+          <br><br>Genshin Impact Revenue Chart: Banner Revenue Chart. GenshinLab. (2022, March 25). Retrieved April 12,
+          2022, from https://www.genshinlab.com/genshin-impact-revenue-chart/.
+          <br><br>Genshin Impact Characters Popularity Index. GenshinLab. (2022, March 25). Retrieved April 13, 2022,
+          from https://www.genshinlab.com/genshin-impact-characters-popularity-index/.
+          <br><br>Gregson-Wood, S. (2020, October 10). AFK Arena has announced a collaboration with Markiplier that sees
+          the YouTube star appear as an in-game NPC. Pocket Gamer. Retrieved April 26, 2022, from
+          https://www.pocketgamer.com/afk-arena/afk-arena-has-announced-a-collaboration-with-markiplier-that-sees-the-youtube-st/.
+          <br><br>Griggs, J. (2021, June 7). How the legend of neverland is exactly like genshin impact. ScreenRant.
+          Retrieved April 8, 2022, from https://screenrant.com/legend-neverland-genshin-impact-clone-ripoff-copy/.
+          <br><br>HoYoverse. (2022). About Us. Retrieved April 29, 2022, from
+          https://www.hoyoverse.com/en-us/abount-us?utm_source=genshin&amp;utm_medium=footer.
+          <br><br>Hussain, U., et al. The dual nature of escapism in video gaming: A meta-analytic approach. Computers
+          in Human Behavior Reports, 3, 100081.
+          <br><br>Japan: Fate/Grand Order Mau 2020. Statista Research Department. (2021, December 15). Retrieved April
+          27, 2022, from https://www.statista.com/statistics/1189050/japan-fate-grand-order-monthly-active-users/
+          <br><br>Johnson, D., & Wiles, J. (2003). Effective user interface design in games. Ergonomics, 46(13-14),
+          1332–1345. https://doi.org/10.1080/00140130310001610865.
+          <br><br>Khan, T. (2020, November 19). Genshin impact is allegedly "bribing" content creators with in-game
+          currency to promote the game. Sportskeeda. Retrieved April 26, 2022, from
+          https://www.sportskeeda.com/amp/esports/news-genshin-impact-allegedly-bribing-content-creators-in-game-currency-promote-game.
+          <br><br>King, A. (2022, April 8). Every reason genshin impact is Twitter's most popular game in 2022.
+          ScreenRant. Retrieved April 26, 2022, from
+          https://screenrant.com/genshin-impact-most-popular-game-twitter-2022-why/amp/.
+          <br><br>King, A. (2021, October 21). How many genshin impact players are really leaving the game. ScreenRant.
+          Retrieved April 8, 2022, from https://screenrant.com/genshin-impact-player-count-2021-playing-how-many/.
+          <br><br>Knezovic, A. (2021, April 15). Genshin impact advertising dissection: The secret behind its rapid
+          success. Medium. Retrieved April 28, 2022, from
+          https://medium.com/udonis/genshin-impact-advertising-dissection-the-secret-behind-its-rapid-success-68b6c6727349
+          <br><br>Koeder, M. J., & Tanaka, E. (2017). 28th European Regional ITS Conference, Passau 2017: ¨Competition
+          and Regulation in the Information Age. In Econster. Retrieved October 19, 2021, from
+          https://www.econstor.eu/bitstream/10419/169473/1/Koeder-Tanaka.pdf.
+          <br><br>Lada, J., (2020, October 16). Low genshin impact gacha rates are one of its greatest failings.
+          Siliconera. Retrieved April 8, 2022, from
+          https://www.siliconera.com/low-genshin-impact-gacha-rates-are-one-of-its-greatest-failings/.
+          <br><br>Lax G. & Mackenzie M., (2019). Against All Odds: Desire and Monetisation in Japanese Mobile Games.
+          DIGRAA Retrieved April 29, 2022, from https://digraa.org/wp-content/uploads/2019/01/DIGRAA_2019_paper_38.pdf.
+          <br><br>Mazanko, V. (2022, January 11). Genshin impact is Twitter's most discussed game of 2021, surprising no
+          one. TheGamer. Retrieved April 8, 2022, from https://www.thegamer.com/genshin-impact-twitter-2021/.
+          <br><br>Nataraj. (September 12, 2019). Psychological Reason Behind The Success Of Freemium Model. Product
+          Coalition. Retrieved April 29, 2022 from
+          https://productcoalition.com/psychological-reason-behind-the-success-of-freemium-model-9e714515ed76.
+          <br><br>O’Meara D., & Dechamps L. (2019). The Waifu Effect - Exploring Attraction and Love for Fictional
+          Characters. Retrieved October 20, 2021 from https://omearadarin.com/s/The-Waifu-Effect.pdf.
+          <br><br>Omkar, K. (2021, November 1). Genshin impact ads have started appearing on trains across NYC and
+          Berlin. Gamingsym. Retrieved April 26, 2022, from
+          https://gamingsym.in/genshin-impact-ads-have-started-appearing-on-trains-across-nyc-and-berlin/.
+          <br><br>Orsini, L. (2015, June 24). Why adults fall in love with (and spend big money on) cartoon characters.
+          Forbes. Retrieved April 8, 2022, from
+          https://www.forbes.com/sites/laurenorsini/2015/06/12/why-adults-fall-in-love-and-spend-big-money-on-cartoon-characters/.
+          <br><br>Puyat, M. (2021, April 30). Genshin impact, and the reality of gaming funds. CNN Philippines.
+          Retrieved April 8, 2022, from
+          https://www.cnnphilippines.com/life/culture/tech/2021/4/30/genshin-impact-dota-2-money-spending.html.
+          <br><br>Reza, A., et al. (2020). "I like the way the skin looks": Player perspectives on aesthetic appeal and
+          self-representation with video game "Skins". Retrieved October 21, 2021 from
+          https://www.ideals.illinois.edu/bitstream/handle/2142/106593/Contribution_505_final.pdf?sequence=1&isAllowed=y.
+          <br><br>Roessel, L., & Švelch, J. (2021). Who creates microtransactions : The production context of video game
+          monetization. Game Production Studies. https://doi.org/10.5117/9789463725439_ch10.
+          <br><br>Sahbegovic, A. (2021, December 10). Genshin Impact at the Game Awards 2021: All nominations and
+          results. Sports news. Retrieved April 8, 2022, from
+          https://www.sportskeeda.com/esports/genshin-impact-the-game-awards-2021-all-nominations-results.
+          <br><br>Schöber, T., & Stadtmann, G. (2020). Fortnite: The Business Model Pattern Behind the Scene. ERN:
+          Statistical Decision Theory; Operations Research (Topic).
+          <br><br>Seale, M. (2018). (thesis). Why Do Americans Like Anime So Damn Much?. Retrieved October 20, 2021,
+          from https://libres.uncg.edu/ir/asu/f/Seale,%20Sarah%20Spring%202018%20Thesis.pdf.
+          <br><br>Shibuya, A., et al. (2019). Long-Term Effects of In-Game Purchases and Event Game Mechanics on Young
+          Mobile Social Game Players in Japan. Simulation & Gaming, 50(1), 76–92.
+          https://doi.org/10.1177/1046878118819677.
+          <br><br>Shulman, J. D., & Geng, X. (2019). Does it pay to shroud in-app purchase prices? Information Systems
+          Research, 30(3), 856–871. https://doi.org/10.1287/isre.2019.0835.
+          <br><br>Superdata. (2019). 2018 year in review. Digital games and interactive media.
+          https://adindex.ru/files2/access/2019_01/230617_SuperData%202018%20Year%20in%20Review.pdf.
+          <br><br>Tassi, P. (2021, September 7). What spending $1,723 in a year on 'genshin impact' gets you. Forbes.
+          Retrieved October 21, 2021, from
+          https://www.forbes.com/sites/paultassi/2021/09/07/what-spending-1723-in-a-year-on-genshin-impact-gets-you/.
+          <br><br>Teyvat. (2022). Retrieved April 25, 2022, from https://genshin-impact.fandom.com/wiki/Teyvat.
+          <br><br>Tirtasasmita, R. P. (2020). (thesis). In-App Purchases on Mobile Gaming: What Makes Players Willing to
+          Pay Based on Perceived Values. Retrieved October 19, 2021, from
+          https://dspace.uii.ac.id/bitstream/handle/123456789/30207/14311447%20Randy%20Prakoso%20Tirtasasmita.pdf?sequence=1&isAllowed=y.
+          <br><br>Wen, A. (2020, December 23). Why genshin impact is the most interesting open world game since breath
+          of the wild. TheSixthAxis. Retrieved April 26, 2022, from
+          https://www.thesixthaxis.com/2020/12/23/genshin-impact-breath-of-the-wild-comparison/.
+          <br><br>Whitbourne, S. K., et al. (2013). Reasons for playing casual video games and perceived benefits among
+          adults 18 to 80 years old. Cyberpsychology, Behavior, and Social Networking, 16(12), 892–897.
+          https://doi.org/10.1089/cyber.2012.0705.
+          <br><br>Yuen-Ki, C. (2019). (thesis). Saving for Merlin: Consumer Motivation in Gacha-Based Mobile Gaming.
+          Retrieved October 19, 2021, from
+          https://etd.lis.nsysu.edu.tw/ETD-db/ETD-search/view_etd?URN=etd-0715119-215346.
+          <br><br>Zendle, D., et al. (2020). The changing face of desktop video game monetisation: An exploration of
+          trends in loot boxes, pay to win, and cosmetic microtransactions in the most-played steam games of 2010-2019.
+          Public Library of Science ONE, 15(5). https://doi.org/10.31234/osf.io/u35kt.
+        </p>
+        <br><br><br><br>
+
+  </div>
+
+  <div class="footer">
+    <h3>Thanks for stopping by!</h3>
+    <h4 class="footer-link"><a class="footer-link" href="https://www.linkedin.com/in/katiebarton10/"
+        target="_blank">LinkedIn</a></h4>
+    <h4> / </h4>
+    <h4 class="footer-link"><a class="footer-link" href="mailto:katiebarton4455@gmail.com">Email</a></h4>
+  </div>
+
+</body>
+
+</html>
