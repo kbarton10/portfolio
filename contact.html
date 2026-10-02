@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Katie Barton</title>
+</head>
+
+<body>
+  <div class="rainbow-stripe"></div>
+
+  <div class="nav-container">
+    <div class="navbar">
+      <ul class="nav-list-container">
+        <li style="list-style: none;"><span id="clock"></span></li>
+        <li class="navbar-list-item"><a class="navbar-list home-tab" href="index.html">HOME</a></li>
+        <li class="navbar-list-item"><a class="navbar-list design-tab" href="index.html#design">DESIGN</a></li>
+        <div class="image-container"><a href="index.html">
+            <img src="images/logo.png" alt="Logo Hollow" class="logo-base">
+            <img src="images/logo-filledin.png" alt="Logo Filled-in" class="logo-hover">
+          </a></div>
+        <li class="navbar-list-item"><a class="navbar-list writing-tab" href="index.html#writing">WRITING</a></li>
+        <li class="navbar-list-item"><a class="navbar-list about-tab" href="about.html">ABOUT</a></li>
+        <li class="navbar-list-item"><a class="navbar-list email-tab" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="contact-container">
+      <br><br><br>
+      <h1>CONTACT</h1>
+      <div class="contact-form-container">
+        <form action="mailto:katiebarton4455@gmail.com">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="footer">
+      <h4>Thanks for stopping by!</h4>
+      <h6 class="social-links"><a href="https://www.linkedin.com/in/katiebarton10/" class="social">Linkedin</a> /
+        <a href="mailto:katiebarton4455@gmail.com" class="social">Email</a>
+      </h6>
+    </div>
+
+  </div>
+</body>
+
+</html>
