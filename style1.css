@@ -1,11 +1,26 @@
 @font-face {
   font-family: "Moderniz";
-  src: url(moderniz/Moderniz.otf) format("opentype");
+  src: url(fonts/moderniz/Moderniz.otf) format("opentype");
 }
 
 @font-face {
   font-family: "High Rise";
-  src: url(highrise/HighriseFont-Condensed-Demo.otf) format("opentype");
+  src: url(fonts/highrise/HighriseFont-Condensed-Demo.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "All Sorts";
+  src: url(fonts/allsorts/ALLSORTS-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lostar";
+  src: url(fonts/lostar/Lostar.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mangiola";
+  src: url(fonts/mangiola/Mangiola-Regular.ttf) format("truetype");
 }
 
 body {
@@ -765,4 +780,126 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #d2bb93;
+}
+
+.home-content {
+  margin: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.home-nav,
+.home-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-description {
+  margin-top: -2rem;
+}
+
+.home-desc-item,
+.home-nav-link {
+  font-family: "Roboto Mono", monospace;
+  display: block;
+}
+
+.home-katie {
+  font-family: "Lostar";
+  font-size: 18rem;
+}
+
+.home-barton {
+  font-family: "Lostar";
+  font-size: 23rem;
+}
+
+.home-portfolio {
+  font-family: "Mangiola";
+  font-size: 7rem;
+}
+
+.nameline3 {
+  display: flex;
+  margin-top: -1rem;
+  align-items: flex-end;
+}
+
+.nameline4 {
+  margin-top: -12rem;
+}
+
+.home-page .home-content {
+  position: relative;
+  width: 70vw;
+  max-width: 1000px;
+  min-height: 520px;
+  margin: 5vh auto;
+  padding: 2rem 3rem;
+  background: #f0dfbd;
+  overflow: hidden;
+  border-radius: 4% / 6%;
+}
+
+.home-nav-link,
+.home-desc-item,
+.home-katie,
+.home-barton,
+.home-portfolio {
+  color: #0f0;
+  mix-blend-mode: difference;
+  position: relative;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+  }
+  &:before {
+    content: attr(data-text);
+    color: #f00;
+    animation: ANIMATE-RED 4000ms infinite;
+  }
+  &:after {
+    content: attr(data-text);
+    color: #00f;
+    animation: ANIMATE-BLUE 4000ms infinite;
+  }
+}
+
+@keyframes ANIMATE-RED {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, 5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ANIMATE-BLUE {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-5px, -5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.home-nav-link:hover {
+  transition: 0.3s;
+  transform: translateY(-0.3rem);
 }
