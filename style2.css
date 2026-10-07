@@ -181,7 +181,8 @@ html {
   border: 0.1rem solid #221e14;
   z-index: 3;
   position: fixed;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   overscroll-behavior: none;
   position: fixed;
   margin: 0;
