@@ -611,9 +611,10 @@ h5 {
 
 .contact-btns-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0.5rem 2rem 1rem 2rem;
   gap: 1rem;
+  width: 30rem;
 }
 
 .contact-info-btn {
@@ -642,6 +643,6 @@ h5 {
 }
 
 .phone-btn {
-  width: 28.8rem;
+  width: 30rem;
   margin: 0.5rem 2rem 1rem 2rem;
 }
