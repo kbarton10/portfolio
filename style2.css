@@ -243,6 +243,11 @@ html {
   height: 19rem;
 }
 
+#playground-dialog {
+  width: 40rem;
+  height: 51rem;
+}
+
 .logline {
   font-weight: 800;
 }
@@ -645,4 +650,29 @@ h5 {
 .phone-btn {
   width: 30rem;
   margin: 0.5rem 2rem 1rem 2rem;
+}
+
+.playground-grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.playground-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.playground-container {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.playground-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
