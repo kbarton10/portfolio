@@ -1,0 +1,646 @@
+@font-face {
+  font-family: "Lostar";
+  src: url(fonts/lostar/Lostar.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mangiola";
+  src: url(fonts/mangiola/Mangiola-Regular.ttf) format("truetype");
+}
+
+body {
+  background-color: #eeddbf;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.menu-bar-left,
+.menu-bar-right {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #221e14;
+}
+
+.menu-bar-text {
+  float: left;
+}
+
+.menu-bar-text a,
+.menu-bar-text span,
+.menu-os {
+  display: block;
+  color: #eeddbf;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.menu-os {
+  color: #efa40d;
+  font-weight: bolder;
+}
+
+.menu-bar-text a:hover {
+  background-color: #383326;
+}
+
+.menu-bar-text a:active {
+  background-color: rgb(30, 26, 18);
+  transform: translateY(0.1rem);
+}
+
+.menu-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #221e14;
+}
+
+.menu-bar-left {
+  float: left;
+}
+
+.menu-bar-right {
+  float: right;
+}
+
+.footer {
+  background-color: #c2ae8b;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.background-logo {
+  position: fixed;
+  z-index: -1;
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#katie {
+  font-family: "Lostar";
+  font-size: 18rem;
+  color: #e6d0a9;
+  padding: 0;
+  margin: 0;
+}
+
+#barton {
+  font-family: "Lostar";
+  font-size: 23rem;
+  color: #e6d0a9;
+  padding: 0;
+  margin: 0;
+}
+
+#portfolio {
+  font-family: "Mangiola";
+  font-size: 7rem;
+  color: #e6d0a9;
+  padding-bottom: 4rem;
+  margin: 0;
+}
+
+.nameline1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: -1rem;
+  padding: 0;
+  width: 93%;
+}
+
+.nameline2 {
+  margin-top: -11rem;
+  padding: 0;
+}
+
+.left-icons {
+  float: left;
+  margin: 3rem;
+  z-index: 1;
+}
+
+.right-icons {
+  float: right;
+  margin: 3rem;
+  z-index: 1;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 6rem;
+}
+
+.icon-container:hover {
+  transform: translateY(-0.3rem);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.icon-container:active .icon {
+  background-color: #e4dac9;
+  transform: translateY(0.2rem);
+}
+
+.icon {
+  border: 0.1rem solid #221e14;
+  background-color: #f9f2e4;
+  box-shadow: 0.5rem 0.5rem 0 #d2bb93;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.icon-title {
+  font-family: "Roboto Mono", monospace;
+  align-self: center;
+  color: #221e14;
+  font-size: 1rem;
+}
+
+.dialog {
+  border: none;
+  padding: 0;
+  margin: auto;
+  background-color: #f9f2e4;
+  border: 0.1rem solid #221e14;
+  z-index: 3;
+  position: fixed;
+  overflow: scroll;
+  overscroll-behavior: none;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+#welcome-dialog {
+  width: 50rem;
+  height: 30rem;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+#how-to-dialog {
+  width: 30rem;
+  height: 40rem;
+}
+
+#about-dialog {
+  width: 30rem;
+  height: 30rem;
+}
+
+#work-dialog {
+  width: 40rem;
+  height: 48rem;
+}
+
+#writing-dialog {
+  width: 44rem;
+  height: 44rem;
+}
+
+#contact-dialog {
+  width: 34rem;
+  height: 24rem;
+}
+
+#NORA-dialog,
+#moon-dialog,
+#future-great-dialog {
+  width: 50rem;
+  height: 40rem;
+}
+
+#AOIN-dialog,
+#CCSWCD-dialog,
+#semify-dialog {
+  width: 75rem;
+  height: 40rem;
+}
+
+#music-dialog {
+  width: 36rem;
+  height: 19rem;
+}
+
+.logline {
+  font-weight: 800;
+}
+
+.dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: #e6d0a9;
+  border-bottom: 0.1rem solid #221e14;
+  height: 2.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-header:hover {
+  cursor: grab;
+}
+
+.dialog-header:active {
+  cursor: grabbing;
+}
+
+.dialog-title {
+  font-family: "Roboto Mono", monospace;
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.close-button {
+  all: unset;
+  cursor: pointer;
+  height: 2rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #f9f2e4;
+  background-color: #cd583a;
+  border: 0.1rem solid #221e14;
+  box-sizing: border-box;
+  margin-right: 0.4rem;
+}
+
+.close-button:hover {
+  background-color: #e67255;
+  cursor: pointer;
+}
+
+.close-button:active {
+  background-color: #993b23;
+  transform: translateY(0.1rem);
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #be9b60;
+  margin: 0;
+  padding: 0;
+}
+
+.dialog-content {
+  margin: 2rem;
+}
+
+.dialog-columns {
+  display: flex;
+  gap: 2rem;
+}
+
+.image-placeholder {
+  border: 0.1rem solid #221e14;
+  background-color: #ebc882;
+  height: 19rem;
+  width: 70%;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 25%;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #221e14;
+  background-color: #e6d0a9;
+  padding: 0.5rem;
+}
+
+button:hover {
+  background-color: #c8ae80;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #cbb388;
+  transform: translateY(0.1rem);
+}
+
+p,
+.dialog-list li {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  color: #221e14;
+}
+
+.dialog-list li {
+  margin: 1rem;
+}
+
+.skills-container {
+  border: 0.1rem solid #221e14;
+}
+
+.skills-header {
+  border-bottom: 0.1rem solid #221e14;
+  background-color: #e6d0a9;
+  padding: 0.5rem;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.skills-list li {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  color: #221e14;
+}
+
+.work-content-container {
+  border: 0.1rem solid #221e14;
+  box-shadow: 0.5rem 0.5rem 0 #d2bb93;
+  margin: 1rem 0 1.5rem 0;
+  background-color: #f9f5ee;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.work-content-container p {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.work-content-container:hover {
+  cursor: pointer;
+  background-color: #f8eedd;
+}
+
+.work-content-container:active {
+  background-color: #e5dccb;
+  transform: translateY(0.1rem);
+}
+
+h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.info-container-description {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  color: #be9b60;
+  font-weight: 400;
+}
+
+.info-containers {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.info-container {
+  background-color: #e6d0a9;
+  border: 0.1rem solid #221e14;
+  padding: 0.4rem;
+}
+
+.info-container-tool {
+  color: #221e14;
+}
+
+button:hover .info-container-tool {
+  text-decoration: underline;
+  color: #100d07;
+}
+
+h6 {
+  font-family: "Roboto Mono", monospace;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #b18435;
+  font-weight: 400;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6rem;
+  color: #221e14;
+  font-weight: 700;
+}
+
+.embed-link {
+  color: #b28332;
+}
+
+.embed-link:hover {
+  color: #f2c679;
+}
+
+.banner-img-container {
+  width: 70rem;
+  height: 25rem;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.image-boundary-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.c1-photo1 {
+  height: 18rem;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.c1-photo2 {
+  height: 23rem;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.c1-photo3 {
+  height: 24.5rem;
+  width: auto;
+}
+
+.c2-photo1 {
+  height: 32rem;
+  width: auto;
+  margin: 1rem 0;
+}
+
+.c2-photo2 {
+  height: 23rem;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.dialog-list li {
+  font-family: "Roboto Mono", monospace;
+  color: #221e14;
+}
+
+.c3-photo1 {
+  height: 28rem;
+  width: auto;
+  margin: 1rem 0;
+}
+
+.caption {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.captioned-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-player-content {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.display-screen {
+  height: 4rem;
+  background: linear-gradient(to bottom, #413d34, #221e14);
+  border: 6px solid #e6d0a9;
+  box-shadow: 0 0 0 0.09rem #221e14;
+  padding: 1.5rem 1rem;
+}
+
+.music-player-button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0.7rem;
+}
+
+.music-player-buttons {
+  width: 2.2rem;
+  height: 1.2rem;
+}
+
+#song-title {
+  font-family: "Roboto Mono", monospace;
+  color: #efa40d;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+#artist-name {
+  font-family: "Roboto Mono", monospace;
+  color: #efa40d;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+#progress-bar {
+  background-color: #221e14;
+  height: 1rem;
+  width: 100%;
+}
+
+.contact-btns-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 2rem 1rem 2rem;
+  gap: 1rem;
+}
+
+.contact-info-btn {
+  all: unset;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.3rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #221e14;
+  background-color: #e6d0a9;
+  display: flex;
+  flex-direction: column;
+  margin-top: -1rem;
+  padding: 0.5rem;
+}
+
+.contact-info-btn:hover {
+  background-color: #c8ae80;
+  cursor: pointer;
+}
+
+.linkedin-btn {
+  width: 20rem;
+}
+
+.phone-btn {
+  width: 28.8rem;
+  margin: 0.5rem 2rem 1rem 2rem;
+}

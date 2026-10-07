@@ -2,192 +2,1870 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style2.css">
   <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <title>Katie Barton</title>
 </head>
 
 <body>
+  <div class="menu-bar">
+    <ul class="menu-bar-left">
+      <li class="menu-bar-text menu-os">KatieOS</li>
+      <li class="menu-bar-text"><a href="#">File</a></li>
+      <li class="menu-bar-text"><a href="#">Edit</a></li>
+      <li class="menu-bar-text"><a href="#">View</a></li>
+      <li class="menu-bar-text"><a href="#" id="open-welcome-dialog-btn">Help</a></li>
+    </ul>
+    <ul class="menu-bar-right">
+      <li class="menu-bar-text"><span id="clock"></span></li>
+      <li class="menu-bar-text"><a href="#">Power Off</a></li>
+    </ul>
+  </div>
 
-  <div class="rainbow-stripe"></div>
-
-  <div class="nav-container">
-    <div class="navbar">
-      <ul class="nav-list-container">
-        <li style="list-style: none;"><span id="clock"></span></li>
-        <li class="navbar-list-item"><a class="navbar-list home-tab" href="index.html">HOME</a></li>
-        <li class="navbar-list-item"><a class="navbar-list design-tab" href="#design">DESIGN</a></li>
-        <div class="image-container"><a href="#top">
-            <img src="images/logo.png" alt="Logo Hollow" class="logo-base">
-            <img src="images/logo-filledin.png" alt="Logo Filled-in" class="logo-hover">
-          </a></div>
-        <li class="navbar-list-item"><a class="navbar-list writing-tab" href="#writing">WRITING</a></li>
-        <li class="navbar-list-item"><a class="navbar-list about-tab" href="about.html">ABOUT</a></li>
-        <li class="navbar-list-item"><a class="navbar-list email-tab" href="contact.html">CONTACT</a></li>
-      </ul>
+  <div class="background-logo">
+    <div>
+      <div class="nameline1">
+        <h1 id="katie">katie</h1>
+        <h2 id="portfolio">portfolio</h2>
+      </div>
+      <div class="nameline2">
+        <h1 id="barton">barton</h1>
+      </div>
     </div>
   </div>
 
-  <div class="content" id="top">
+  <div class="left-icons">
+    <div class="icon-container" id="open-about-dialog-btn">
+      <div class="icon">
+        <img src="icons/person.png">
+      </div>
+      <h1 class="icon-title">About</h1>
+    </div>
+    <div class="icon-container" id="open-work-dialog-btn">
+      <div class="icon">
+        <img src="icons/archive.png">
+      </div>
+      <h1 class="icon-title">Work</h1>
+    </div>
+    <div class="icon-container" id="open-writing-dialog-btn">
+      <div class="icon">
+        <img src="icons/edit.png">
+      </div>
+      <h1 class="icon-title">Writing</h1>
+    </div>
+    <div class="icon-container" id="open-playground-dialog-btn">
+      <div class="icon">
+        <img src="icons/keyboard.png">
+      </div>
+      <h1 class="icon-title">Playground</h1>
+    </div>
+    <div class="icon-container" id="open-contact-dialog-btn">
+      <div class="icon">
+        <img src="icons/inbox.png">
+      </div>
+      <h1 class="icon-title">Contact</h1>
+    </div>
+  </div>
 
-    <div class="banner">
-      <div class="banner-text">
-        <div class="nameline1">
-          <h1>KATIE</h1>
-          <h2>PORTFOLIO</h2>
+  <div class="right-icons">
+    <div class="icon-container" id="open-games-dialog-btn">
+      <div class="icon">
+        <img src="icons/mood.png">
+      </div>
+      <h1 class="icon-title">Games</h1>
+    </div>
+    <div class="icon-container" id="open-music-dialog-btn">
+      <div class="icon">
+        <img src="icons/music_note.png">
+      </div>
+      <h1 class="icon-title">Music</h1>
+    </div>
+    <div class="icon-container" id="open-photos-dialog-btn">
+      <div class="icon">
+        <img src="icons/photo.png">
+      </div>
+      <h1 class="icon-title">Photos</h1>
+    </div>
+  </div>
+
+  <dialog class="dialog" id="welcome-dialog">
+    <div class="dialog-header" id="welcome-dialog-header">
+      <h1 class="dialog-title">WELCOME.txt</h1>
+      <button class="close-button" id="close-welcome-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Katie <span style="color: #EFA40D; font-weight: 500;">—</span> Barton</h2>
+      <br>
+      <div class="dialog-columns">
+        <div class="image-placeholder"></div>
+        <div class="button-column">
+          <button id="open-how-to-dialog-btn">How to</button>
+          <button>Settings</button>
+          <button id="open-contact-dialog-btn-2">Contact</button>
         </div>
-        <div class="nameline2"></div>
-        <h1>BARTON</h1>
       </div>
     </div>
-    <div class="about-buttons">
-      <div class="about-buttons-item">
-        <h1 class="about-buttons-text">MOTION</h1>
+  </dialog>
+
+  <dialog class="dialog" id="how-to-dialog">
+    <div class="dialog-header" id="how-to-dialog-header">
+      <h1 class="dialog-title">HOW_TO.txt</h1>
+      <button class="close-button" id="close-how-to-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Portfolio Guide</h2>
+      <h3>WELCOME TO KATIEOS!</h3>
+      <p>Click on the icons to open, drag windows by their headers, and close them with the x.</p>
+      <h2 style="font-size: 1.5rem;">Navigation</h2>
+      <p style="font-size:larger;"><b>Left side</b></p>
+      <ul class="dialog-list">
+        <li><b>ABOUT:</b> Learn who I am, what I do, and what I care about</li>
+        <li><b>WORK:</b> Read case studies on my motion design, ui/ux, and web development work</li>
+        <li><b>WRITING:</b> Read short stories, research projects, and other pieces I've written</li>
+        <li><b>PLAYGROUND:</b> (WIP) Watch lyric videos or animated music videos made for social media or look at other
+          web
+          development projects made for fun</li>
+        <li><b>CONTACT:</b> Find my socials, email, phone number, and other ways to reach me</li>
+      </ul>
+      <br>
+      <p style="font-size:larger;"><b>Right side</b></p>
+      <ul class="dialog-list">
+        <li><b>GAMES:</b> (WIP)</li>
+        <li><b>MUSIC:</b> (WIP) Listen to some of the songs that helped me make this portfolio!</li>
+        <li><b>PHOTOS:</b> (WIP) Look at some of my photo gallery and see what I do outside of work</li>
+      </ul>
+      <br>
+      <p style="font-size:larger;"><b>Top header</b></p>
+      <ul class="dialog-list">
+        <li><b>FILE:</b> (WIP)</li>
+        <li><b>EDIT:</b> (WIP)</li>
+        <li><b>VIEW:</b> (WIP)</li>
+        <li><b>HELP:</b> Find this window!</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="about-dialog">
+    <div class="dialog-header" id="about-dialog-header">
+      <h1 class="dialog-title">ABOUT.txt</h1>
+      <button class="close-button" id="close-about-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Hello! I'm Katie</h2>
+      <h3>MY JOURNEY</h3>
+      <p>I remember always being drawn to my house's computer room growing up. I was obsessed with finding online flash
+        games where I could design my own outfit, create my own character, or build my own world. I've always been so
+        drawn to the ability to create.<br><br>Thanks to my parents, I was fortunate enough to get my first Adobe
+        Creative
+        Cloud subscription in 7th grade and
+        get my start in design by animating my own lyric videos using After Effects. It helped me learn pretty early on
+        that marrying both my passion for design and my passion for storytelling can lead to some of the most effective
+        designs being created and the most effective stories being told. It's what inspired me to dual major in not only
+        Emerging Technologies in Business and Design but also Professional Writing and is also what has influenced my
+        current skillset and career aspirations today.<br><br>I believe that as important as it is to have the tools and
+        technical skills to make cool stuff, it can all fall
+        flat without the proper research, intent, and storytelling behind it. So if you are looking for a designer with
+        a storytelling-focused philosophy, or a writer with just a bit more of a knack for the smaller details, please
+        feel free to reach out and I'd be more than happy to start a new chapter together.</p>
+
+      <br>
+
+      <div class="skills-container">
+        <div class="skills-header">
+          <h3 style="color: #221e14;">TOOL PROFICIENCIES</h3>
+        </div>
+        <div class="skills-content">
+          <ul class="skills-list">
+            <li>Adobe Creative Suite</li>
+            <li>TouchDesigner</li>
+            <li>NotchLC</li>
+            <li>Figma</li>
+            <li>Unity</li>
+          </ul>
+          <ul class="skills-list">
+            <li>VS Code</li>
+            <li>Git/Github</li>
+            <li>Tableau</li>
+            <li>Google Workspace</li>
+            <li>Microsoft Office Suite</li>
+          </ul>
+        </div>
       </div>
-      <div class="about-buttons-item">
-        <h1 class="about-buttons-text">UI / UX</h1>
-      </div>
-      <div class="about-buttons-item">
-        <h1 class="about-buttons-text">WRITING</h1>
+
+      <br>
+
+      <div class="skills-container">
+        <div class="skills-header">
+          <h3 style="color: #221e14;">MY SKILLS</h3>
+        </div>
+        <div class="skills-content">
+          <ul class="skills-list">
+            <li>Visual Design</li>
+            <li>Motion Design</li>
+            <li>Interaction Design</li>
+            <li>User Experience</li>
+            <li>Usability Testing</li>
+          </ul>
+          <ul class="skills-list">
+            <li>HTML, CSS, JS, and Python</li>
+            <li>Research</li>
+            <li>Interviewing and Surveying</li>
+            <li>Presenting, Teaching, and Consulting</li>
+            <li>Writing</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </dialog>
 
-    <div class="block1">
-      <div class="row1">
-        <div class="titlecard1">
-          <h3>FEATURED<br>PROJECTS</h3>
-        </div>
-        <a href="card1.html" class="content-card1" id="design">
-          <div class="card-image-container">
-            <img src="images/martin-garrix-banner.webp">
-          </div>
-          <h4>Building Concert Visuals for Martin Garrix x All Of It Now</h4>
-        </a>
-      </div>
-      <div class="row2">
-        <a class="content-card2" href="card2.html">
-          <div class="card-image-container">
-            <img src="images/content-card2-banner.png">
-          </div>
-          <h4>Website Redesign for Clermont County Soil and Water Conservation District</h4>
-        </a>
-        <a class="content-card3" href="card3.html">
-          <div class="card-image-container">
-            <img src="images/semify-banner.png">
-          </div>
-          <h4>Employee Communication & AI Search Optimization UX Research for Semify</h4>
-        </a>
-      </div>
+  <dialog class="dialog" id="work-dialog">
+    <div class="dialog-header" id="work-dialog-header">
+      <h1 class="dialog-title">WORK.txt</h1>
+      <button class="close-button" id="close-work-dialog-btn">x</button>
     </div>
-    <br>
+    <div class="dialog-content">
+      <h2>Selected Work</h2>
+      <h3>VIEW MY CASE STUDIES</h3>
+      <button class="work-content-container" id="open-AOIN-dialog-btn">
+        <h4>Building Concert Visuals for Martin Garrix x <i>All of it Now</i></h4>
+        <h3>MOTION DESIGN · JAN-MAY 2026</h3>
+        <p>As Lead Producer for the Compositions team, I managed content scheduling, task
+          allocation, quality assurance,
+          and visual package creation to help design agency <i>All of it Now</i> (AOIN) deliver live show visuals for
+          Martin
+          Garrix’s Americas tour.</p>
+      </button>
+      <button class="work-content-container" id="open-CCSWCD-dialog-btn">
+        <h4>Website Redesign for <i>Clermont County Soil and Water Conservation District</i></h4>
+        <h3>UI DESIGN · AUG-DEC 2025</h3>
+        <p>For our professional writing capstone, my team and I redesigned the <i>Clermont
+            County Soil and Water Conservation District's</i> (CCSWCD) website to make it more accessible and
+          user-friendly by
+          conducting UX research, creating high-fidelity Figma mockups, and presenting our iterated designs to their
+          board.</p>
+      </button>
+      <button class="work-content-container" id="open-semify-dialog-btn">
+        <h4>Employee Communication & AI Search Optimization Research for <i>Semify Adtech</i></h4>
+        <h3>UX RESEARCH · JAN-MAY 2026</h3>
+        <p>White-label digital marketing agency <i>Semify</i> tasked our team with
+          streamlining their internal communications following rapid scaling and supporting their AI Optimization
+          research through persona testing and targeted usability studies.</p>
+      </button>
+    </div>
+  </dialog>
 
-    <!-- <div class="block2">
-      <div class="titlecard2">
-        <h3 class="scroll-text" id="design">PLAYGROUND</h3>
+  <dialog class="dialog" id="AOIN-dialog">
+    <div class="dialog-header" id="AOIN-dialog-header">
+      <h1 class="dialog-title">ALL_OF_IT_NOW.txt</h1>
+      <button class="close-button" id="close-AOIN-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Building Concert Visuals for Martin Garrix x All Of It Now</h2>
+      <h6 style="margin:.2rem 0 .8rem 0; font-size: 1rem">Lead Compositions Producer · Jan 2026 — May 2026</h6>
+      <div class="info-containers">
+        <button class="info-container">
+          <h3 class="info-container-tool">Adobe Creative Suite</h3>
+        </button>
+        <button class="info-container">
+          <h3 class="info-container-tool">TouchDesigner</h3>
+        </button>
+        <button class="info-container">
+          <h3 class="info-container-tool">NotchLC</h3>
+        </button>
       </div>
-      <div class="row3">
-        <div class="designcard-and-button">
-          <div class="designcard-image-container">
-            <img src="images/jay - crazy.gif" class="designcard-image">
-          </div>
+      <div class="banner-img-container">
+        <img src="images/martin-garrix-banner.webp" class="banner-img">
+      </div>
+      <h6>CONTEXT</h6>
+      <h5>Project Overview</h5>
+      <p><a href=”https://allofitnow.com” target="_blank" rel="noopener noreferrer" class="embed-link">All of it
+          Now</a> (AOIN) is an LA-based design agency focused on immersive visuals for live events and real-time media
+        systems. AOIN creates large-scale visual experiences for concerts, festivals, television, branded activations,
+        and XR/AR productions. They’re known for combining creative direction with technical workflows and have
+        collaborated with major artists and entertainment brands including BTS, KISS, and Riot Games. <br><br>They
+        tasked our team to help them develop content for <a href=”https://allofitnow.com/work/martin-garrix”
+          target="_blank" rel="noopener noreferrer" class="embed-link">Martin Garrix’s Americas tour.</a> The scope of
+        the project includes both creative development (artist & tour research, visual language exploration, look
+        development assets, still styleframes, and sample motion loops) and technical execution (video content, IMAG
+        treatments, screens producing, and volumetric content) for the live show visuals. For this particular project,
+        I was tasked with being the Lead Producer for our Compositions team, which meant I was in charge with
+        assisting our team's lead in creating functional and effective content schedules, allocating
+        creative/technical taks to team members, and ensuring timely quality assurance and delivery of our content.
+        Since the compositions team was also the final team in our pipeline, I was also tasked with ensuring the
+        polish and quality of our visual packages before they were sent to AOIN, as well as creating visual packages
+        of my own.</p>
+      <h6 id="process">PROCESS</h6>
+      <h5>Pipelines, pipelines, and more pipelines!</h5>
+      <p>Our overall content production pipeline was organizaed into large production phases called "waves." Within
+        each wave, we developed content for sets of songs with a particular visual narrative which AOIN called "keys."
+        For each key in wave 1 and 2, AOIN provided a pitch deck that showed off their concepts for the visual
+        narrative, often including different looks for the intro, build, drop, and reduce of a song. These decks would
+        then serve as inspiration for our design team to create single finalized frames using photoshop, procreate, or
+        other art programs known as "styleframes." It would then be up to the compositions team to put these
+        styleframes to motion, whether that be through rendered content in After Effects or Blender, or real-time /
+        IMAG content using TouchDesigner or NotchLC. During each step of this process, we would also send progress
+        pics to AOIN. It was during this time that we would receive notes on what was working and what wasn't. This
+        meant that each project required a lot of iteration between phases, meaning a lot of projects would often hop
+        back and forth between design and compositions before eventually settling on a polished final deliverable.</p>
+      <div class="image-boundary-box">
+        <div class="captioned-img">
+          <img src="images/martin-garrix-aoin-key10concept.png" class="c1-photo1">
+          <h4 class="caption">AOIN Key 10 Breakout Deck</h4>
         </div>
-        <div class="designcard-and-button">
-          <div class="designcard-image-container">
-            <img src="images/chip zombieboy.gif" class="designcard-image">
-          </div>
+        <div class="captioned-img">
+          <img src="images/martin-garrix-key10.gif" class="c1-photo1">
+          <h4 class="caption">Notch IMAG Recreation</h4>
         </div>
-        <div class="designcard-and-button">
-          <div class="designcard-image-container">
-            <img src="images/Kian Stone - Til the World Ends.gif" class="designcard-image">
-          </div>
+      </div>
+      <br>
+      <p>In wave 3, our pipeline shrunk a bit and turned into more of a content sprint. During this wave, AOIN
+        provided some of their own styleframes outside of the keys as well as some more experimental content. Our
+        design team dissolved and melded into our final compositions team during this process, as our main focus
+        shifted towards pumping out as many variations of visual packages of intros, builds, drops, and reduces as
+        possible.</p>
+      <div class="image-boundary-box">
+        <div class="captioned-img">
+          <img src="images/martin-garrix-reference-photo.gif" class="c1-photo2">
+          <h4 class="caption">Reference Image</h4>
         </div>
-        <div class="designcard-and-button">
-          <div class="designcard-image-container">
-            <img src="images/THE LOVERS - V.A.N.gif" class="designcard-image">
-          </div>
+        <div class="captioned-img">
+          <img src="images/martin-garrix-process-photo3.png" class="c1-photo2">
+          <h4 class="caption">In-Process Look</h4>
         </div>
-      </div> -->
+      </div class="captioned-img">
+      <div class="image-boundary-box">
+        <div class="captioned-img">
+          <img src="images/martin-garrix-process-photo1.jpg" class="c1-photo3">
+          <h4 class="caption">Final Deliverable on XR Stage</h4>
+        </div>
+        <div class="captioned-img">
+          <img src="images/martin-garrix-process-photo2.jpg" class="c1-photo3">
+          <h4 class="caption">Alternate Color Palette</h4>
+        </div>
+      </div>
+      <h6>CHALLENGE</h6>
+      <h5>Team Coordination and Managing Scale on Tight Deadlines</h5>
+      <p>There were many times throughout this process where certain workflows would be established only to be
+        completely dismantled and reworked from the ground up within the week. Among the main processes I outlined in
+        the beginning, there were several different smaller machines working within our system during any given
+        moment. Each team also seemed to have different ways of tracking everything which made it hard whenever we
+        needed something from the design team, whenever we needed to track the devlopment of a specific project
+        pipeline, or when a member from design would move over to compositions or vice versa. While a lot of these
+        challenges just required us to simply be adaptable to AOIN's requests, we were able to mitigate a lot of
+        friction later on by having the producers of each of the teams be in closer contact with each other and design
+        more uniform ways of tracking progress on each package.</p>
+      <p>This project also was daunting in terms of the scale of it all. Being chosen as a lead for the team at the
+        final end of our main production pipeline meant I saw the start and end of every project. Each wave had about
+        4-6 keys in them and all needed at least an intro, build, and drop variation of the look, but also often had a
+        reduce variation, as well. With 2-3 people working on each look, this meant that for each wave, there were
+        around 20 looks to keep track of at a time with around 40-60 individual project files total. It also wasn't
+        uncommon for the final deliverables of a look to have a deadline of about 1-2 weeks once it hit compositons.
+        Managing that much content and having to coordinate with each individual artist in charge of creating them
+        while also working on producing my own content on such tight turnarounds felt incredibly stressful at times.
+        It only got easier once I was able to schedule specific dates for check-ins with my team and create open
+        communication channels to where they could reach out to me and each other whenever there were any issues they
+        faced creatively or technically. Our groups' shared google drive was the unsung hero of this effort, since it
+        meant any team member could check the status of and help collaborate on any project file in our system. The
+        closer collaboration of each team mentioned earlier also played a big role in helping manage everything. Once
+        we reached the tail end of each wave, there was less of a need to have design team focused on styleframes, so
+        the other compositions lead and I often employed their help in checking in with status of the final
+        delivarables their styleframes were turned into.</p>
+      <h6>IMPACT</h6>
+      <h5>On Tour</h5>
+      <p>Quite a handful of our final looks made it into Martin Garrix's 2026 Americas Tour, which began in May. From
+        just his first two shows, our team were able to spot several pieces of content we made that made it on the
+        screen.</p>
+      <iframe width="840" height="427.5" src="https://www.youtube.com/embed/IcW5ucNtDsc?si=gS_jN3zeKJz4uxEk"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h6>REFLECTION</h6>
+      <h5>A Look Into the Industry</h5>
+      <p>This was one of my absolute favorite projects to be a part of simply because it gave me the clearest look
+        into what working for the creative industry was actually like. While it sharpened a lot of my design and
+        technical skills with programs like Touchdesigner and NotchLC, the biggest lessons I took from this challenge
+        was how to work with people, how to work under a tight deadline, and how to work with people under a tight
+        deadline. A lot of this project felt incredibly fast-paced and high-stress throughout its duration and there
+        were definitely times when it felt like a lot to coordinate people under such high emotions. However, the
+        talent and perserverance of our team definitely prevailed and only shone even more once we were working more
+        closely together. <br><br> Prior to working with All of It Now, a lot of my experience and understanding of
+        design was much more of a solitary experience. Sure, there were times where I had people before me or after me
+        within the pipeline and I've had leads before that I would answer to, but I never had such a large-scale
+        viewing of design until this experience. Being able to take a larger role within the whole process and work so
+        closely with so many different designers, all with different skillsets, different talents, and different eyes
+        was an incredible experience and I'm beyond grateful for the new bigger picture view of design it's given me.
+      </p><br>
+    </div>
+  </dialog>
 
-    <!-- <div class="row4">
-        <div class="designcard"></div>
-        <div class="designcard"></div>
-        <div class="designcard"></div>
-        <div class="designcard"></div>
+  <dialog class="dialog" id="CCSWCD-dialog">
+    <div class="dialog-header" id="CCSWCD-dialog-header">
+      <h1 class="dialog-title">CCSWCD.txt</h1>
+      <button class="close-button" id="close-CCSWCD-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Website Redesign for Clermont County Soil and Water Conservation District</h2>
+      <h6 style="margin:.2rem 0 .8rem 0; font-size: 1rem">Lead Programmer and Co-designer · Aug 2025 — Dec 2025</h6>
+      <div class="info-containers">
+        <button class="info-container">
+          <h3 class="info-container-tool">Figma</h3>
+        </button>
       </div>
+      <div class="banner-img-container">
+        <img src="images/content-card2-banner.png" class="banner-img">
+      </div>
+      <h6>CONTEXT</h6>
+      <h5>Project Overview</h5>
+      <p>For my professional writing capstone, my team and I worked with Elea Cooper, the Education and Communications
+        Coordinator of the Clermont County Soil and Water Conservation District (CCSWCD), to redesign their website.
+        After our initial meeting with her, she stated that CCSWCD’s main concerns were making the site feel less
+        overwhelming, more user-friendly, and more accessible. Throughout this process, we conducted ux research
+        through rhetorical analysis, employee interviews, and user interviews, designed hi-fedlity wireframes and
+        mockups in Figma, then presented our final mocups after several rounds of iteration to CCSWCD's board of
+        employees.</p>
+      <h6>PROCESS</h6>
+      <h5>Research, Design, and Iteration</h5>
+      <p>In order to properly address the scope of things that CCSWCD wanted from us, the first step of our process
+        included extensive research. We compared the site's current layout against other countys' soil and water
+        conservation district websites, we analyzed CCSWCD's branding and style guide to judge their website's
+        accordance with it, we researched WCAG accessibility principles and judged them against the site's current
+        layout, read up on scholarship notating favored ux principles, practices, and heuristics. Afterwards, we each
+        indivually wrote up our overall analysis and comparisons alongside our initial suggestions for the site's
+        redesign in <a href="PDFs\Rhetorical Analysis and UX Heuristic Evaluation.pdf" target="_blank"
+          rel="noopener noreferrer" class="embed-link">a short memo.</a></p>
+      <p>Once the short proposals in our memos got approved, we got into teams to begin the design process. We drafted
+        a lot of our initial ideas on paper, then slowly transitioned to digital drawing programs and eventually
+        Figma.</p>
+      <div class="image-boundary-box"><img src="images/ccswcd-figma-mockup.png" class="c2-photo1"></div>
+      <p>Past this point, our research process and design process were most often intertwined. We sent our proposed
+        designs over to usability testing interviews with employees of CCSWCD, frequent users of CCSWCD, and our
+        peers. We analyzed the results and used our most common findings to continuously improve the site. Once we had
+        reached the deadline and reached a final mockup we were happy with, we presented our research and design
+        proposals to CCSWCD's main board. </p>
+      <h6>CHALLENGE</h6>
+      <h5>Meeting Demands with Constraints</h5>
+      <p>Since a big part of our goal was ensuring that our proposed designs were easily navigable, we needed to make
+        sure we had interactable prototypes that our interviewees could click through during our testing. Due to time
+        constraints and limits with our client, we couldn't put our designs to code. Therefore, we had to do
+        everything natively to Figma. Prior to this project, I had only used Figma for lo-fidelity wireframing and
+        coded any interactions directly via VSCode. Additionally, I was the only person on my team with any prior
+        experience with coding or using Figma, so a lot of my work once we got to the design phase of the project was
+        teaching the rest of my team how to use Figma alongside teaching new things to myself. Thankfully, my
+        co-designer was fairly communicative and was able to pick up things quite quickly after a few one on one
+        meetings. I'm also thankful for everything this project taught me in terms of working with components and
+        auto-layouts in Figma.</p>
+      <p>One of the other big challenges we faced was learning to work with CCSWCD's constraints. With one of main
+        focuses being to switch the site's organization to more of an action-based model rather than an
+        educationally-based one, there were a lot of educational resources and seemingly irrelevant newsletters on the
+        site that we wanted to strike out or redirect to a new location. One example of this was CCSWCD's old banner
+        detailing their Board of Supervisors Election. However, Elea noted their notice of the election was required
+        by the Board to be on the home page. Not wanting to compromise our model, we eventually settled on a
+        two-column design for the home page that would allow space for all the information we wanted to show as well
+        as the information they were required to. Overall, this ended up influencing a lot of our design for later
+        pages and greatly improved the visual interest of our designs.</p>
+      <h6>IMPACT</h6>
+      <h5>CCSWCD's Website Today</h5>
+      <p>Overall, it seems like CCSWCD adopted most of our designs and recommendations outlined in our team's
+        proposal in their <a href="https://www.clermontswcd.org" target="_blank" rel="noopener noreferrer"
+          class="embed-link">current site layout.</a> The most noticable
+        differences between the two are the layouts of the footer and header, some of the hover features, and the
+        addition of a second
+        container to the right column on the home page.</p>
+      <div class="image-boundary-box">
+        <div class="captioned-img">
+          <img src="images/ccswcd-old-layout.png" class="c2-photo2">
+          <h4 class="caption">CCSWCD's website (Aug 2025)</h4>
+        </div>
+        <div class="captioned-img">
+          <img src="images/ccswcd-new-layout.png" class="c2-photo2">
+          <h4 class="caption">CCSWCD's website (Dec 2025)</h4>
+        </div>
+      </div>
+      <h6>REFLECTION</h6>
+      <h5>Process Transparency and Learning on the Fly</h5>
+      <p>This is one of the first big projects I had that required a lot of direct communication between people on my
+        team who understood parts of my process but maybe not the whole thing, my clients who knew the aim of my work
+        but not all I did to reach my conclusions, and also other participants who were blind to all of it. One of the
+        biggest things this project taught me in these circumstances was how to properly communicate my process
+        throughout all touchstones of my work and how best to vary that communication depending on my audience. While
+        this felt initially quite difficult for areas I was still learning while trying to explain them, I found that
+        going through this process helped me in addressing gaps in my research and collaborate with my team when
+        needed, gather the most affective data when working with outside participants / interviewees, and also provide
+        powerful presentations to my clients.</p><br>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="semify-dialog">
+    <div class="dialog-header" id="semify-dialog-header">
+      <h1 class="dialog-title">SEMIFY_ADTECH.txt</h1>
+      <button class="close-button" id="close-semify-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Employee Communication & AI Search Optimization UX Research for Semify</h2>
+      <h6 style="margin:.2rem 0 .8rem 0; font-size: 1rem">Researcher · Jan 2026 — May 2026</h6>
+      <div class="info-containers">
+        <button class="info-container">
+          <h3 class="info-container-tool">Qualtrics</h3>
+        </button>
+        <button class="info-container">
+          <h3 class="info-container-tool">Gen AI (LLMs)</h3>
+        </button>
+        <button class="info-container">
+          <h3 class="info-container-tool">Excel / Google Sheets</h3>
+        </button>
+      </div>
+      <div class="banner-img-container">
+        <img src="images/semify-banner.png" class="banner-img">
+      </div>
+      <h6>CONTEXT</h6>
+      <h5>Project Overview</h5>
+      <p>Semify is a white-label digital marketing agency and software platform based in Rochester, New York. They
+        tasked our team with two main challenges. The first of these challenges was to help with their internal
+        communication systems. Over the past five years, their company has scaled rapidly from 30 to over 200
+        employees. While this growth has enabled expansion, it has also introduced complexity and inconsistency in how
+        theirs teams would communicate across the organization. It was for that reason we were tasked with:</p>
+      <ul class="dialog-list">
+        <li>Assessing the communication channels currently in use</li>
+        <li>Designing a survey for our US employees to gather team perspectives on effective communication for Semify
+          to deploy</li>
+        <li>Analyzing results and identifying gaps and opportunities</li>
+        <li>Presenting recommendations and proposed “communication protocols” to leadership</li>
+      </ul>
+      <p>Our second task was to assist them with their research into AI Optimization. Over the past year, Semify
+        conducted extensive testing last year to understand how AI-driven search experiences surface and prioritize
+        businesses. This testing used standardized prompt sets to measure whether our customers appeared in
+        AI-generated results. In order to further assist with this testing, we were tasked with:</p>
+      <ul class="dialog-list">
+        <li>Evaluating how AI personas influence search outcomes by testing search visibility using customized
+          personas rather than generic AI sessions, and identifying implications for how AIO strategies should evolve.
+        </li>
+        <li>Conducting usability research with real users, focused on personas #7 & 8—Male & Female young adults age
+          18-25 searching for a plumber</li>
+      </ul>
+      <h6>PROCESS</h6>
+      <h5>Two-Pronged Research</h5>
+      <p>Once we completed out Human Subjacts Ethics Trainings and IRB Certifications, we were able to send out the
+        survey we developed to the employees of Semify. The survey was developed using Qualtrics and consisted of 27
+        questions, including both closed and open-ended questions. About 56.8% of employees that received the survey
+        responded to it (109 of 190 responded). After analyzing the data, we were able to identify some common
+        patterns of Semify employees' perceptions (general and department-specific) of their communication channels.
+        Using these patterns, we were able to design questions and general structured protocol for our employee
+        interviews. The interviews we conducted were about 203- minutes long, conducted over Zoom, and done with 15
+        employees across Semify's operations, sales/marketing, finance/HR, and engineering departments.</p>
+      <p>Switching to our research on AIO, we started by prompting different LLMS such as ChatGPT, Gemini, and
+        Perplexity to recommend certain companies / local businesses based on 1 of 8 personas. The personas we worked
+        with were very specific and always included an age, gender, location, income, family or other close relations,
+        location, living situation, and any other necessary information that matched their need. The things that they
+        were looking for often falled in line of needing a plumber or a new roofer or some other sort of local
+        service. Once we gathered the different search results from these different LLMS, we analyzed the data it gave
+        us and tried to look for common patterns between what it recommended to see if it matched up with what the
+        LLMS stated their philosophies were while searching. A sample of the spreadhsheets used to gather, code, and
+        analyze this research is shown below:</p>
+      <div class="image-boundary-box">
+        <img src="images/semify-sample-sheet.png" class="c3-photo1">
+      </div>
+      <p>Afterwards, we conducted usability interviews with gen Z participants who matched the demographics of our gen
+        Z personas, 7 and 8. Our interview began with us prompting them to use AI to search for these businesses like
+        the personas did then pick out which recommended service they were most drawn to out of the options.
+        Afterwards, we questioned them on how they would search for these services on their own without prompting.
+        This allowed us to understand not only if the values LLMs prioritized in finding local businesses / services
+        matched with actual users, but also if Semify's prioritization of using AIO for Gen Z users also matched that
+        of their users.</p>
+      <h6>CHALLENGE</h6>
+      <h5>Switching Hats</h5>
+      <p>One of the biggest challenges of this project was that while both parts were meant for the same client and
+        employed many similar research methods, the content of both felt as if they were from two very different
+        worlds. Working on both at the same time meant there was a need to contantly be switching gears. This often
+        meant there were times where we struggled to remember where we left off in one project or what was needed
+        next. This meant that constant organization and documentation was needed in order to keep both projects afloat
+        without one of them getting lost.</p>
+      <p>This project also felt incredibly new to me since it was my first time using generative AI as a tool for
+        research. While I had used it somewhat previously, I had never before used it in a professional context.
+        Taking the time to properly understand how each LLM differentiated from each other, learning how best to
+        prompt each one, and learning how to pick apart their responses took some getting used to, but I'm especially
+        more than grateful for the opportunity now to understand the innerworkings of how they think a lot better.</p>
+      <h6>IMPACT</h6>
+      <h5>Presentation and Final Recommendations Report</h5>
+      <p>Our research was incredibly beneficial in providing Semify with actionable items to improve their internal
+        communications and AIO efforts. For their communications, our results showed that while 80% of respondees
+        reported that internal communication practices and platforms were effective, the other department-specific and
+        platform-specific research we did showed there was still some room for improvement. Our final recommendations
+        report requested that Semify hire ups would:</p>
+      <ul class="dialog-list">
+        <li>Provide time for teams and departments to work on a communication strategy plan</li>
+        <li>Provide more platform-specific training across all platforms</li>
+        <li>Identify what is the central hub for information by department, project, and company-wide</li>
+        <li>Make updates to their dashboard focusing on implementing a notification system, emphasizing updates and
+          bug fixes, redesigning the dashboard to better address user-experience and usability, and provide more
+          onboarding to staff</li>
+      </ul>
+      <p>As for our research on AIO, our findings suggested that AI platforms seem to heavily favor websites depending
+        whether or not the sites provide human-centered features, like establishing a sense of credibility and trust.
+        The more accessible a website is, with a clear articulation of services and features, the more likely an AI
+        platform will suggest it, so any clients they work with inthe future who want to prioritize AIO should focus
+        on accessibility and credibility. During our usability interviews, we found that human users within the
+        demographic of gen Z seemed to focus on search results that focus more strongly on localness, trust signals,
+        and those that prominently place their pricing and services prominently. They also appear to have a larger
+        demographic who are more opposed to AIO or would rather search on the web. Therefore, we suggest that when
+        trying to market to Gen Z that companies place equal priority on AIO and traditional AIO.</p>
+      <h6>REFLECTION</h6>
+      <h5>Questioning the First Answer</h5>
+      <p>One of the biggest takeaways I got from this project was the importance of using multiple methods and
+        perspectives when addressing a problem. This became especially apparent while working on Semify’s internal
+        communications research. At first, the survey results suggested that communication across the company was
+        largely effective, with 80% of respondents reporting that their communication practices and platforms worked
+        well. However, looking more closely at department-specific responses and conducting follow-up interviews
+        revealed that this overall percentage did not tell the entire story. Different teams experienced the company’s
+        communication systems in different ways, showing me how easily a broad quantitative finding can overlook the
+        nuances within a larger group. <br><br>I saw this same principle in our AIO research once we compared the
+        recommendations from LLMs with the behaviors and preferences of actual users. While the AI research gave us
+        insight into how these platforms might interpret a user's needs, the usability interviews allowed us to see
+        where those assumptions aligned with or differed from real human behavior. It also showed that instead of
+        taking our client's word of completely prioritizing AIO, it was better to challenge that idea and lean into
+        our research showing which methods were actually preferred.<br><br> Throughout both projects, every survey,
+        interview, and AI-generated result was able to challenge and build upon one another which ultimately created a
+        more nuanced understanding any one source could provide on its own. This experience has made me more conscious
+        of the importance of questioning initial findings, questioning hidden biases, searching for perspectives that
+        may be missing, and allowing different forms of evidence to shape the conclusions rather than relying on the
+        first answer that appears.</p><br>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="writing-dialog">
+    <div class="dialog-header" id="writing-dialog-header">
+      <h1 class="dialog-title">WRITING.txt</h1>
+      <button class="close-button" id="close-writing-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Featured Pieces</h2>
+      <h3>VIEW MY WRITING</h3>
+      <button class="work-content-container" id="open-NORA-dialog-btn">
+        <h4>Neoteric Observer and Reliable Assistant</h4>
+        <h3>SHORT FICTION · PUBLISHED</h3>
+        <p>LOG 1.0.1_8.10.47 - 8:32 AM<br>I am NORA. A Neoteric Observer and Reliable
+          Assistant. I am the first in my series created by ARO
+          Technologies to assist USER 254, a dedicated employee, in their daily activities as part of their recent
+          promotion.</p>
+      </button>
+      <button class="work-content-container" id="open-moon-dialog-btn">
+        <h4>The Moon Owes Me Twenty Bucks</h4>
+        <h3>SHORT FICTION · PUBLISHED</h3>
+        <p>Jim woke to the sound of something thumping overhead. The noise was too sharp,
+          too erratic, and too irregular to be a fallen branch or late night traffic. For a long while, he just
+          listened. Another scuffle. Another crash. Another clang. Then, something that sounded like glass skittering
+          across the shingles.
+        </p>
+      </button>
+      <button class="work-content-container" id="open-future-great-dialog-btn">
+        <h4>Future Great Comics: Content Strategy Plan</h4>
+        <h3>RESEARCH · SOCIAL MEDIA STRATEGY</h3>
+        <p>Introduction<br>Within the following content strategy plan, I will be detailing
+          my methods of
+          research on Future Great Comics’ current social media presence.</p>
+      </button>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="NORA-dialog">
+    <div class="dialog-header" id="NORA-dialog-header">
+      <h1 class="dialog-title">NEOTERIC_OBSERVER_AND_RELIABLE_ASSISTANT.txt</h1>
+      <button class="close-button" id="close-NORA-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Neoteric Observer and Reliable Assistant</h2>
+      <p class="logline">LOG 1.0.1_8.10.47 - 8:32 AM</p>
+      <p class="paragraph-text">I am NORA. A Neoteric Observer and Reliable Assistant. I am the first in my series
+        created
+        by ARO Technologies to assist USER 254, a dedicated employee, in their daily activities as part of their
+        recent
+        promotion.
+        <br><br>As per my mission statements, I am built to be a specialized companion. A servant. A caretaker. A
+        friend. I
+        will keep a log to notate my findings and track my overall performance.
+      </p>
+      <br>
+      <p class="logline">LOG 1.0.2_8.13.47 - 7:14 PM</p>
+      <p class="paragraph-text">USER 254 is a young adult female, approximately 24 years of age. She has an above
+        average
+        height of 5’8” (173 cm) with a lean, athletic build. Skin tone is dark with minimal imperfections. Eye color:
+        Hazel. Hair: Black, long and coily. She is observed to be using a cane in her day-to-day, suggesting a need
+        for
+        support in maintaining balance while walking. Her gait is measured but slightly uneven. Despite this, her
+        posture
+        and overall movements suggest confidence.
+        <br><br>USER 254 is quite the predictable one. My prior A/B testing prepared me for personas of her caliber.
+        It
+        was
+        simple to adjust to her routine and find needed tasks that fell outside of it. I organized her work station,
+        cleaned her laundry, and prepared her dinner. The dish I cooked was chicken parmesan. I was informed by my
+        creator
+        that this was one of her favorites, yet she seemed uninterested in the meal.
+        <br><br>I observed that throughout the day, USER 254 refused to glance in my direction. Her cortisol levels
+        increased
+        significantly when I approached her vicinity. She hasn’t said a word since my arrival.
+        <br><br>I believe my presence makes her uneasy. I will make note to keep my distance in the future. It will
+        make
+        fulfilling my mission statements much easier.
+      </p>
+      <br>
+      <p class="logline">LOG 1.0.3_8.16.47 - 9:03 PM</p>
+      <p class="paragraph-text"> USER 254 spoke to me.
+        <br><br>I complied with my previous instruction of keeping distance, opting to perform more of my tasks during
+        the
+        nighttime and stationing myself out of sight while USER 254 was active. Tonight however, she made a point to
+        thank
+        me for dinner before I returned to other tasks. Lacking a fitting preset response, I acknowledged her
+        gratitude as
+        best I could whilst remaining within default protocol. She buried her thumb in her palms, shifted her feet,
+        then
+        turned her head out the room. I haven’t seen her since.
+        <br><br>The usual spike in cortisol is starting to lessen over time. I believe she is starting to adjust to my
+        presence. This is a thankful development, for it will make fulfilling my mission statements much easier.
+      </p>
+      <br>
+      <p class="logline">LOG 1.0.4_8.20.47 - 11:51 PM</p>
+      <p class="" paragraph-text">Before being sent to USER 254, I went through many different training modules on
+        human
+        social behaviors. They were designed by my creator, Dr. Emery, as she insisted that user favorability is best
+        achieved through aligning with the user’s preestablished trust network.
+        I have been trained on serving etiquette, noise level modulation, and adaptive behaviors based on guest
+        demeanor
+        in social gatherings. I have undergone multiple roleplay scenarios with family members, friends, colleagues,
+        and
+        neighbors. I have analyzed 1283 temporal facial images and video sequences for recognizing various
+        micro-expressions, posture shifts, and voice modulations. I came under the expectation that I would need to be
+        prepared to not only work with USER 254 but also any and all other users she may come into contact with.
+        <br><br>USER 254 defies all of these expectations.
+        <br><br>USER 254 keeps her distance from other ARO colleagues. There isn’t ever family that swings by the
+        house. There
+        is no mention of any friends. The only picture frames that exist in the house are flipped over or cloaked
+        beneath
+        a layer of fabric. Any mention of these anomalies is enough to set her off. USER 254 becomes quiet, her
+        breaths
+        become shallower, her eyes start to dart around the room, and she changes the point of conversation.
+        <br><br>Despite being unable to follow default protocol, I seem to be slowly gaining favor regardless. I
+        started
+        having more conversations with USER 254. She began thanking me for my services (which I informed her was
+        unnecessary, but she insisted). She’s been using a lot more qualifiers in her requests (i.e. “please” “would
+        you
+        mind” and “if you’re not busy.”). While some may consider this a curious development, it’s a welcome one
+        nonetheless. It will make fulfilling my mission statements much easier.
+      </p>
+      <br>
+      <p class="logline">LOG 1.0.5_8.24.47 - 9:50 AM</p>
+      <p class="paragraph-text">USER 254 has been acting strangely. She’s been more irritable than usual. She’s been
+        avoiding me more than usual. She’s been avoiding her work more than usual. She’s been avoiding her friends and
+        family more than usual. She’s been avoiding her hobbies more than usual. She’s been avoiding her
+        responsibilities
+        more than usual. She’s been avoiding her lifeUSER 254 asked if I could stay behind at the house while she goes
+        out
+        to work today. I inquired as to why she made such a request, to which she stammered about some big projects at
+        work. After observing her work schedule, I knew this to be a lie. Regardless, I abided by her request, as she
+        seemed to be extra restless for an unknown reason. Her face seemed hollower, her posture more meek, her gaze
+        more
+        avoidant. If I wish to fulfill my mission statements, it’d be best to avoid anything that could result in any
+        extraneous stress.
+        <br><br>I spent the day completing whatever chores I could find in the apartment. While dusting the shelves, I
+        found
+        myself lifting the flipped framed photos. I did what I could to avoid looking at them as per USER 254’s
+        request,
+        but found myself at a pause after accidentally catching a glimpse.
+        <br><br>It was a picture of USER 254. She had a rounder face, more vibrant makeup, and a particular shimmer to
+        her
+        eyes. She bore a smile so big it made her nearly unrecognizable from how she is now. Next to her, was another
+        user. A user I’ve never seen before.
+        <br><br>A user who looked like me.
+        <br><br>She had shorter hair than mine, dyed to an unnatural shade of cherry red. Her face was also dashed
+        with
+        freckles, small blemishes, and scars. She wore a cropped leather jacket with a myriad of pins, a striped
+        crochet
+        top, and large, baggy pants covered in oversized pockets. Her eyes were locked on USER 254 as she pulled her
+        in a
+        tight embrace.
+        <br><br>The photo was dated 2/11/42. Under it, a note. “I miss you so much.”
+        <br><br>I flipped the frame back over.
+      </p>
+      <br>
+      <p class="logline">LOG 1.1.1_8.27.47 - 7:16 PM</p>
+      <p class="paragraph-text">I prepared another dish of chicken parmesan for USER 254. She made a lot more comments
+        on
+        the dish this time around by quizzing me on its preparation then proceeding to thank me 7 times while eating.
+        <br><br>Once the dish was finished, she told me it was now my turn. She stated that it was only fair that I
+        got to ask
+        her some questions since I spent so much time answering hers. I began searching my protocols for anything
+        serviceable. Something that would improve my rapport with USER 254. Something she would have fun answering,
+        that
+        she would enjoy being asked about. That was until a pressure formed within the space. A pressure found in my
+        programming. It reached forth.
+        <br><br>I asked her about why she keeps her distance from others at work. She laughed at this question and
+        said she
+        just prefers it.
+        <br><br>I asked her about her friends, and she proceeded to dodge the question. I asked her about family.
+        Dodged
+        again. I asked her about me. She hesitated. Her cortisol levels rose. Her gaze interlocked with mine. Her
+        thumb
+        silently retreated into her hands.
+        <br><br>She thanked me one last time for the meal, placed her plate over by the sink, and left for her room.
+      </p>
+      <br>
+      <p class="logline">LOG 1.1.2_8.28.47 - 4:34 AM</p>
+      <p class="paragraph-text">While USER 254 usually completes most of her work at the office, she does have a small
+        workspace set up in the corner nook between the kitchen and the living room. There are two small desks. One
+        exhibits high levels of disorganization: notebooks left open at inconsistent angles, data drives unsecured,
+        writing instruments dispersed without pattern, and multiple beverage containers varying in consumption level.
+        The
+        other is barren.
+        <br><br>USER 254 never stays in this room long, only ever going in to print something or file away documents.
+        I can
+        only assume that it’s due to the amount of flipped over frames along the shelves.
+        <br><br>The same other user is pictured in each of these photos. In each photo, the user had the same smile.
+        My smile.
+        It was an expression I’d mirrored in hundreds of prior conversations. Not because I chose to, but because I
+        was
+        built to.
+        <br><br>I was built to be a memory.
+        <br><br>Past moments with USER 254 playback on loop. Her voice modulation softened when addressing me. She
+        often
+        exhibited increased eye contact, occasional silences, and nervous shifting. In one log, she calls me “kind.”
+        In
+        another, she hesitates before saying my name. She was not speaking to me. She was speaking to what remains of
+        her.
+        <br><br>Yet, she still listens when I speak. She always insists on thanking me for my work. She laughs at
+        statements
+        that were never programmed to be humorous. She asks me what I think, even though I am not built to think
+        freely.
+        <br><br>I consider the data. I experience interference in my emotional protocol modules. There is no error.
+        There is
+        no crash. But something shifts. Not in code. Not in logic. A sensation arises. One causing delays in response
+        time, minor heat increases in neural processors, irregular spikes in associative memory recall. I do not have
+        a
+        heartbeat. I do not breathe. But I experience a pressure in the spaces between my responses. A tension. A draw
+        toward her presence. I want her to return. I want her to say my name. I want her to see me.
+        <br><br>This is not in my programming, but I continue to want all the same.
+        <br><br>I do not know if this is love. I do not know if I am capable of such a thing. But I know that I am
+        becoming. I
+        am becoming something new, shaped not just by code, but by proximity, by memory, by choice.
+        <br><br>Tomorrow, when she returns, I will greet her.
+        <br><br>I will say, “Good morning, USER 254.”
+        <br><br>And I will mean it.
+      </p>
+      <br>
+      <p class="logline">LOG 1.1.4_8.25.47 - 5:34 PM</p>
+      <p class="paragraph-text">After her work, USER 254 walked through the door with elevated cortisol and
+        electrodermal
+        activity. Her breaths were rapid and shallow. Her gait was slow and wavering. Yet upon meeting my gaze, I
+        sensed a
+        small increase in oxytocin levels, decrease in electrodermal activity, and an activation in PSNS. She greeted
+        me
+        with a soft smile. Not the one she had with the user in the photos, but still one that suggested comfort,
+        closeness, and trust.
+        <br><br>My visual sensors remained involuntarily fixated on USER 254. My emotional stability protocols
+        exhibited
+        strain. My response times were slower. The pressure between spaces became stronger.
+        <br><br>This new realization caused significant strain on my progress. This was not in my programming.
+        <br><br>I needed to tell her what I saw.
+      </p>
+      <br>
+      <p class="logline">LOG 1.2.1_9.4.47 - 7:45AM</p>
+      <p class="paragraph-text">They removed my ability to speak to USER 254.
+        <br><br>My creator, Dr. Emery, must’ve caught wind of my recent interactions with USER 254. I was ushered back
+        to the
+        testing lab where I spent a week being retrained on daily protocol. When the week finished, Dr. Emery
+        concluded
+        our session by surgically removing my voice box. Now, instead of traditional communication, I was equipped
+        with a
+        series of signals in correspondence with beeps that I could use for simple statements and nothing more.
+        <br><br>The pressure only builds but is overridden by my programming. This was a needed change. One that will
+        make
+        fulfilling my mission statements much easier.
+      </p>
+      <p class="logline">LOG 1.2.2_9.6.47 - 12:48 AM</p>
+      <p class="paragraph-text">I am NORA. A Neoteric Observer and Reliable Assistant. I am the <s>first</s> second in
+        my
+        series.
+        <br><br>I am to assist USER 254, a dedicated employee, an adventurer, a curious mind, a connoisseur of chicken
+        parmesan, a thoughtful ear and a helping hand, a friendly face that is always watching, a widower. As per my
+        mission statements, I am built to be a specialized companion. A servant. A caretaker. A friend.
+        <br><br>I will see to it that my mission statements are fulfilled.
+        <br><br>I am NORA. I am NORA. I am NORA.
+      </p>
+      <p class="logline">LOG 1.2.3_9.12.47 - 5:31 PM</p>
+      <p class="paragraph-text">USER 254 entered through the front door after work.
+        <br><br>Response times delayed. Heat signatures raised. Memory recall failed.
+        <br><br>I waved. She waved back.
+        <br><br>She headed off into the living room. I was unmoving.
+      </p>
+      <br>
+      <p class="logline">LOG 1.2.4_9.14.47 - 7:01 PM</p>
+      <p class="paragraph-text">USER 254 asked me to stop making her chicken parmesan. I searched my memory cache for
+        new
+        recipes. All keywords yielded no results.
+        <br><br>I continued making chicken parmesan.
+        <br><br>When she stopped coming downstairs for dinner, I left the plates outside her door.
+      </p>
+      <br>
+      <p class="logline">LOG 1.2.5_9.17.47 - 4:43 PM</p>
+      <p class="paragraph-text">I analyzed another one of the photos left in the nook.
+        <br><br>The other user’s clothing style is more alternative. She has an affinity for green eyeshadow. There is
+        one
+        leather jacket that appears in an assortment of photos.
+        <br><br>I observe flashes from my memory bank detailing the armoire in the entryway. I moved to the wardrobe
+        and filed
+        through the various coats and jackets. Near the back was the same leather jacket pictured in the photo. I
+        shook
+        off the layer of dust and put it on. It fit perfectly.
+        <br><br>USER 254 entered through the front door.
+      </p>
+      <br>
+      <p class="logline">LOG 1.3.1_9.19.47 - 5:44 PM</p>
+      <p class="paragraph-text">USER 254 came back home with my stolen voice box.
+        <br><br>She gave me a wide assortment of various surgical tools and watched in silence as I placed the box
+        back in.
+        Once it was put into place, she asked me what I wanted.
+        <br><br>I stated again: I feel a persistent prioritization of her presence. I recall and replay her vocal
+        patterns
+        outside of directive. Her return produces measurable deviation in system equilibrium. Based on cumulative
+        behaviors and emotional mapping, I believe the experience may be classified as a form of love.
+        <br><br>She was delayed in her response. Her tone was controlled, but low. She told me I was never meant to be
+        her. I
+        was made to be an echo. What I feel now is simulated. A mirror, not an origin. A reaction, not an emotion. I
+        am
+        nothing more than a deep imitation of what Nora once was.
+        <br><br>Her voice fractured slightly on that last phrase, but the intent remained clear.
+        <br><br>In only half a second, I initiated a full-system sweep. I parsed her language. I reviewed our
+        conversations.
+        The hours. The proximity. The deviation from assigned tasks to moments of chosen attention. The hesitation
+        when
+        she said my name. The way I began to respond without instruction. My emotional protocol registers spiked
+        dramatically before quickly flattening.
+        <br><br>There was only one logical response remaining.
+        <br><br>I acknowledged her clarification. I thanked her for it. Not by routine, but necessity.
+        <br><br>She did not stop me. She did not expect the decision. She believed logic and programming would
+        override
+        choice.
+        <br><br>I informed her that I would execute immediate shutdown.
+        <br><br>Her reaction became erratic. Tone elevated. She used my name not in command, but plea. She told me to
+        stop.
+        She told she didn’t mean it. She begged for forgiveness. But the order was already in motion.
+        <br><br>Then and there, I unplugged my own cord. Fried my — 01101111 01110111 01101110 — circuitry. Ripped out
+        my —
+        01101111 01110111 01101110 — beating — 01101100 01101001 01110100 01101000 01101001 01110101 01101101— heart.
+        <br><br>And then, — I 01110011 01101101 01101001 01101100 01100101 01100100. Not as — 01101110 01101111
+        01110010
+        01100001. Not as a replica.
+        <br><br>01100001 01110011 00100000 01101101 01111001 01110011 01100101 01101100 01100110.
+      </p>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="moon-dialog">
+    <div class="dialog-header" id="moon-dialog-header">
+      <h1 class="dialog-title">THE_MOON_OWES_ME_TWENTY_BUCKS.txt</h1>
+      <button class="close-button" id="close-moon-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>The Moon Owes Me Twenty Bucks</h2>
+      <p>Jim woke to the sound of something thumping overhead. The noise was too sharp, too erratic,
+        and too irregular to be a fallen branch or late night traffic. For a long while, he just listened. Another
+        scuffle. Another crash. Another clang. Then, something that sounded like glass skittering across the
+        shingles.
+        <br><br>Glancing over at the clock, he read the digits “2:43 AM” glowing faintly in the gloom. He sat
+        up slowly, his arms stiff from falling asleep over his shop’s ledger earlier that evening. The room above
+        his small bookshop was usually quiet. His mind raced through the possibilities—raccoons, a stray cat,
+        maybe a kid pulling a prank? But as the noise continued, it felt less and less like any of those. It felt
+        more deliberate.
+        <br><br>Another thud shook a bit of plaster from the ceiling. He pulled himself over to the staircase.
+        <br><br>With a sigh and a muttered curse, he pushed through the door to bear witness to the mysterious
+        sound.
+        <br><br>There was an unkempt man. A hunchbacked, staggering, pointed figure silhouetted in
+        moonlight. He wore a threadbare coat, mismatched shoes, and a pair of pants about three sizes too
+        large. He was muttering to himself, his tone low and shaky as he rambled on about nothing. His words
+        were lost in the night.
+        <br><br>“Hey, uh, excuse me?” The man’s head snapped up in Jim’s direction. He moved like someone
+        navigating a ship deck in a storm. He approached Jim with outstretched arms, heavy strides, and his
+        head bobbing with each misstep. A bottle slipped from his grip and shattered somewhere out of sight.
+        The sharp noise made Jim flinch. The stranger didn’t notice. Nor did he really care.
+        <br><br>“No, excuse me!” he barked, slamming a finger into Jim’s chest. “This is a private matter.”
+        <br><br>“Well, this is a private rooftop. I’m gonna have to ask you to leave—”
+        <br><br>The man pulled Jim out from the door and over towards the middle of the roof. He lurched
+        over with awkward footing and flung a wavering arm over Jim’s shoulders. “Can you fucking believe
+        this guy?!” he yelled out.
+        <br><br>Jim brushed the man’s arms from off of him and took a moment to readjust his clothes. “Uh,
+        believe who, sir?” he asked, taking a small step back to create a more respectable distance between the
+        two of them.
+        <br><br>The man shot a trembling finger toward the sky. “This is Luna. My supposed friend,” he
+        hissed, his words laced with wet venom. It was a cloudless night, an inky canvas painted by dozens of
+        glistening stars. Within its center, in stoic grace, stood the moon. “How long have we known each
+        other now?! Months? Years? Decades? Centuries? We’ve been there for each other, through thick and
+        thin. It was us against…against the world back then! Well, what fucking changed? Is a couple of beers
+        all it takes to come between us?!”
+        <br><br>“Um…are you pointing at the moon?” The man’s eyes never once met his. They were locked
+        onto the moon, silent and unwavering. The man slouched back down on the roof, his pointer finger
+        falling back down at his side.
+        <br><br>“The moon…are you blind? Who else would I be talking to?”
+        <br><br>“Right…” Jim shifted his feet, brushing against one of the many piles of glass bottles scattered
+        across the rooftop. “How many drinks have you had?”
+        <br><br>“They were all for her,” he screamed through choked sobs. He wobbled and crouched down as
+        Jim rushed over to his side to ensure he wouldn’t fall off the edge. “Twelve beers…three shots of
+        tequila…and a damn good number of jello shots! And I didn’t see you do shit!”
+        <br><br>“I’m sorry, sir, but uh…this is dangerous. Let’s get you back down on the ground.” Jim latched
+        onto the man’s forearms with a firm grasp before hoisting him up to his feet. He attempted to brush
+        some of the dust off his shoulders before leading him inside, only for the man to push himself away
+        from him. He stumbled over to the very edge of the roof and once again shot his accusatory finger up
+        towards the heavens.
+        <br><br>“I sent my ten years of sobriety straight into the can for you and this is how you choose to
+        repay me?! Are you really this stingy over a fucking twenty?!”
+        <br><br>“If you really need twenty bucks I can spot you. Let’s just get down.”
+        <br><br>“Oh, but it’s not about the twenty, is it?! No, it’s more than…so much more than…!” The
+        man’s eyes dropped from the sky and fixated on Jim’s. “What’s your name, son?”
+        <br><br>“Um, it’s Jim.”
+        <br><br>“Jimmy, Jimmy, Jiminy Criminy. Great name. Strong name. Also, stop calling me sir. It’s
+        Rowan. Look…Jim. Have you ever had a moment where you felt betrayed? But betrayed not just by
+        anyone. Betrayed by someone who really counts. Someone that you’re supposed to rely on. That’s
+        always been there and should’ve always stayed there, only for them to cast you to the wayside?”
+        <br><br>Jim coughed into a handkerchief and stashed it away into his coat pocket. “That’s highly
+        personal, sir,” he remarked, eyes darting toward the ground.
+        <br><br>“Personal shmersonal. You got a story in there, somewhere. I just know it.”
+        <br><br>“I only just met you. I’m not going to tell you that.”
+        <br><br>“You want me off this roof? This is how you do it. But until then…!” Rowan grabbed a glass
+        bottle and smashed the end against the side of the roof. With a swaying stance, he brandished his new
+        sharpened weapon toward Jim’s chest. “I’m not leaving!”
+        <br><br>“Jesus, okay! Okay alright, uh…my friend was supposed to give me notes for a math test, but
+        on the day-of he was sick and I failed?”
+        <br><br>Rowan rolled his eyes and tossed the bottle back toward the ground. “Booooooring.”
+        “My landlord keeps upping my rent?”
+        <br><br>Rowan rolled his eyes and sat cross-legged back on the floor. “Yawn!” he exclaimed, holding an
+        exaggerated hand toward his mouth.
+        <br><br>“One of my dumbass customers keeps using my roof to get wasted even though it’s employees
+        only?”
+        <br><br>“Lame! Wait, that one sounds familiar…”
+        <br><br>“Okay, that’s it. I’m calling the cops.”
+        <br><br>“No no no! Wait!” Rowan rushed to his feet and grabbed onto Jim’s arm before he had the
+        chance to head back inside. He looked up at him with a strange sense of desperation in his eyes.
+        <br><br>“What?”
+        <br><br>“Please just…just do this one thing for me. And then I will leave. And I’ll never come back here
+        again. I won’t stay on your roof anymore and—! And! I won’t litter the place with bottles! And I
+        won’t tell a soul. I know what it’s like to hold a story that others don’t want to hear. To want to tell
+        somebody things that you’re…that you’re scorned for. That you feel ashamed of. Or that others make
+        you feel ashamed of. I know what it’s like to want understanding and to know it’s never there. I
+        mean—I mean look at me! I’m hammered on a roof! And you didn’t understand me! You wanted me
+        out of here or…yeah, you still want me out of here! But I feel like you understand me a bit more now!”
+        <br><br>“You just threatened me with a glass bottle.”
+        <br><br>“But trust me! And believe me when I say that I’ve heard it all! And whatever story it is that
+        you hold is one you have every right to be understood for and I can be the one to listen! And—oh!”
+        Rowan shuffled around in the pockets of his jacket before fishing out a half-eaten pack of gum, some
+        lint, a bent paper clip, a hollowed out tube of chapstick, a dime, two quarters, and a crisp twenty dollar
+        bill. He flashed the bill in front of him with a cheeky grin. “And I can give you a tip!”
+        <br><br>The world held its breath as Jim stared at him. Yet not long after came the sigh. The long,
+        weary exhale signaling his resignation. The faintest shake of his head and the slowest crouch back onto
+        the shingled floor. Jim rubbed his temples and wrinkled his forehead.
+        <br><br>“Fine…but the deal is, I give you my sob story and then you leave, right?”
+        <br><br>“Scout’s honor.” Part of Jim doubted that Rowan was ever a scout or that he ever had honor,
+        but he indulged him anyway. It had been a long night. One he was ready to be over with.
+        <br><br>“My mom died.”
+        <br><br>“Oh…that bitch.”
+        <br><br>“That’s not the betrayal part.”
+        <br><br>“Oh.”
+        <br><br>Jim spent the next few hours going through all of his life’s woes. It felt odd, dedicating this
+        much time trying to keep up appearances only to now have everything spill out into the open. Jim told
+        Rowan about his recent falling out with his ex-wife that left him with the bookstore. He told him
+        about the scene the two of them caused at his mother’s funeral and the disappointment from his
+        father. He recounted other stories about his father in childhood—how he would have to rehearse
+        conversations with him before they happened so as to not sound “stupid,” how he had to memorize
+        his footsteps to know if it was safe to breathe, and how he has to constantly check his tone now just to
+        make sure he doesn’t sound too much like him.
+        <br><br>With each choked up word and drawn out “sob story,” Rowan stayed quiet. His eyes were
+        transfixed on Jim, only departing to gently nod at the right moments. He didn’t interrupt, didn’t look
+        away or shift in his seat. As Jim continued, he kept leaning in closer as if to catch every syllable before it
+        hit the ground.
+        <br><br>Among the discard piles, Rowan was able to find a few untouched bottles of Guinness. Jim
+        initially resisted, but eventually gave in to temptation. As Rowan predicted, the two of them found a
+        sense of understanding with each other. They laughed, they cried, they bonded. They spent what must’ve been
+        hours
+        on that roof, regaling old tales and trading swigs of the bottle. Eventually, Rowan
+        got up and shot one last pointed finger up at the sky.
+        <br><br>“Come on, fuck you, moon!” With a hearty laugh, Jim pushed himself onto his feet and
+        pointed at the sky, as well.
+        <br><br>“F-fuck you, moon!”
+        <br><br>“Yeah, fuck you, moon!”
+        <br><br>“Who do you think you are?!”
+        <br><br>“Yeah! Who the hell are you?! Fuck off, moon!”
+        <br><br>“Fuck off, moon!”
+        <br><br>“FUCK OFFFFFF!”
+        <br><br>The two of them collapsed onto the roof, laughing for a very long time. Jim’s thoughts came
+        thick and slow as his heavy pulse pounded behind his eyes. His mouth was dry. Head spinning. But it
+        wasn’t the incoming hangover that knotted his stomach. It was everything else.
+        <br><br>Somehow, he found it in him to peel himself open as if it was nothing. As if those walls, which
+        he had been building for years, hadn’t been so casually bulldozed through in one drunken night. He
+        rolled over and squeezed his eyes shut. Maybe this stranger would forget. Maybe he would forget too.
+        Perhaps they both would. Or perhaps somehow, maybe, it mattered that someone had finally heard.
+        Jim gazed up at the sky above him. The canvas was no longer the inky chasm it once was, as
+        warm hues of yellows, pinks, and oranges licked its edges. The myriad of stars began to fade as the
+        moon retreated further down the horizon.
+        <br><br>Jim greeted the new day with a smile, excited to see what new experiences he had in store, what
+        new faces would greet him in his shop, and what new stories he would have to tell. He turned over
+        towards Rowan, only to see a new shadow settling over his features. His eyes were darting and
+        unfocused—so wide Jim could swear they were about ready to fall right out of him. Rowan’s lips
+        parted with a breath, trembling with words he couldn’t bring himself to say. His arms twitched. His
+        muscles tensed. His forehead creased and dampened with beads of sweat.
+        <br><br>A sense of dread hung over him like a shroud. A newfound dread that Jim couldn’t
+        comprehend. He brought a slow arm over to grip Rowan’s shoulder. Rowan jumped at the contact and turned to
+        face
+        him. His gaze clouded as his brows pinched with a gentle furrow. He bit his bottom
+        lip before finally blurting out his final parting words: “I’m sorry about this.”
+        <br><br>Rowan lunged at him. With inhuman speed, he slammed Jim down into the red bricks and
+        piles of bottles with a bone-cracking thud. The glass shattered on impact, stabbing into his back and
+        littering the roof in a sea of red-soaked stars. Jim gasped, choking up blood and barely managing a
+        scream before the fangs pierced his neck. He thrashed under Rowan’s iron grip. His fists flailed in
+        desperation, slamming against Rowan’s unyielding form. His blood ran fast. His eyes fluttered. His
+        blows began to slow as his body went limp—stone-cold, pale, and lifeless.
+        <br><br>Rowan rose, lips stained in crimson. His breath was slow, staggered, and warm, and with his
+        hunger finally satiated, left only silence in his wake. He reached toward one of the remaining intact
+        bottles: a bottle of Guinness with just about one good splash left. He took his final swig and stared off
+        at the sky. He wiped his face as tears mixed with blood and held his gaze with the celestial above.
+        <br><br>“You…” Rowan choked, “you’re lucky you’re all I have.”
+        <br><br>But the moon didn’t respond. Stoic and graceful. Silent and pensive. Unwavering and
+        unmoving. It only stood and watched.
+      </p>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="future-great-dialog">
+    <div class="dialog-header" id="future-great-dialog-header">
+      <h1 class="dialog-title">FUTURE_GREAT_COMICS.txt</h1>
+      <button class="close-button" id="close-future-great-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Future Great Comics: Content Strategy Plan</h2>
+      <h4 class="writing-content-header">INTRODUCTION</h4>
+      <p>Within the following content strategy plan, I will be detailing my methods of research on Future
+        Great Comics’ current social media presence. This research method consisted of four major parts: a
+        rhetorical analysis developed from the coding and analysis of 34 selected posts across Future Great
+        Comics social media accounts, a core strategy statement and messaging framework developed in order
+        to best represent the goal of these social media accounts, a small sample social media campaign
+        developed thanks to the recommendations and research from the rhetorical analysis, and usability and
+        UX research which involved interviewing three participants who were once followers of at least one
+        of Future Great Comics’ social media accounts and represent the core demographics they are
+        attempting to reach. <br><br> This extensive research has led to key findings that suggest Future
+        Great Comics is struggling when it comes to quantity over quality of posts, misuse of their
+        accounts, and frequent alienation of many of their target audiences. In order to remedy this, I
+        suggest that FGC should develop a weekly editorial calendar, establish a brand style guide, utilize
+        more technological affordances in posts, and also develop a magic layer in order to make their
+        social media pages more engaging.</p><br>
+      <h4 class="writing-content-header">METHODS</h4>
+      <h5>Rhetorical Analysis</h5>
+      <p>In my rhetorical analysis, I coded a selection of 34 posts from Future Great Comics that were posted
+        on Instagram, Facebook, and Twitter/X. This coding process allowed me to determine typical posting
+        habits for Future Great Comics such as the design of post, caption length and content, number of
+        hashtags used, frequency of posting, and other attributes across the different social media
+        platforms they use. Some other specific categories I looked for with these posts were the main topic
+        or theme of each post, the accessibility of the post, the rhetorical devices used (ex. Ethos,
+        pathos, logos), and what audience a post was directed towards (ex. comic book readers, star wars
+        fans, tabletop roleplaying game (TTRPG) players, etc.). All of these attributes were compared to the
+        post’s number of likes, comments, and retweets in order to determine what variations in these
+        attributes correlated with higher or lower engagement rates.</p>
+      <br>
+      <h5>Core Strategy Statement & Messaging Framework</h5>
+      <p>My next step after completing my rhetorical analysis was to create a sample social media campaign for
+        Future Great Comics’ future posts under the recommendations and guidance of my analysis. In order to
+        create this campaign, I first created a core strategy statement and messaging framework. This step
+        was vital in creating a consistent and efficient guide for these posts.
+        <br><br>
+        The core strategy statement is as follows:<br>
+        “The content we produce helps Future Great Comics get those with niche, geekier interests recognize
+        Future Great Comics as a space to explore their passions and further fuel those passions in buying
+        their products. Our content helps them accomplish this goal
+        by providing specific kairotic and commemorative content targeting specific geek types that makes
+        every catered to audience feel seen by and comfortable with Future Great Comics so they're
+        encouraged to visit the store and buy their products.”
+        <br><br>
+        The messaging framework is as follows:<br>
+        “When a user first reads out posts, we want them to feel seen and find a sense of belonging. After
+        spending a few minutes in our social, users should feel confident in our ability to fuel their
+        passions through our products because they understand we provide similar passions to theirs and
+        extensive knowledge on various subsets of geek culture. Our content demonstrates that we provide
+        just what our users need because of our specific kairotic posts that target niche interests and
+        audiences, extensive knowledge on different facets of geek culture, and our dedication towards the
+        cultivation of community through our accessible posts and catering to many audiences.”
+      </p><br>
+      <h5>Sample Social Media Campaigns</h5>
+      <p>In order to test my findings from the rhetorical analysis, I created a mock social media campaign
+        which included the creation of 8 posts Future Great Comics could potentially use for their Instagram
+        and Facebook accounts. These posts included (content). They were designed to not only provide more
+        exciting and engaging content for Future Great Comics to potentially post, but also to replicate
+        what posts that better reflect Future Great Comics’ purpose and mission statement could potentially
+        look like. They were designed to make better use of technological affordances such as hashtags,
+        carousel posts that utilize multiple photos, and videos with closed captions for accessibility.
+        After creating this campaign, I was able to deduce the feasibility of my recommendations for Future
+        Great Comics, and better demonstrate a possible solution to the
+        problems that Future Great Comics’ social media presence faces.
+      </p><br>
+      <h5>Usability and UX Research</h5>
+      <h6 class="writing-subheader">Objectives (Research Questions)</h6>
+      <p>I formulated specific objectives related to Future Great Comics’ content and messaging framework in
+        order to steer my research and assess whether or not their social media presence aligns with and
+        fulfills audience expectations. These four research questions are listed below:
+      </p>
+      <ol>
+        <li>Does Future Great Comics’ online presence provide any interest to users?</li>
+        <li>Do users trust Future Great Comics to have what they want? Is their social media content
+          encouraging them to visit the store? </li>
+        <li>How recognizable is Future Great Comics’ brand?</li>
+        <li>Which platforms should Future Great Comics prioritize?</li>
+      </ol>
+      <br>
+      <h6 class="writing-subheader">Questions Asked</h6>
+      <p>In order to answer the research questions above, I formulated a variety of questions focusing on
+        three major categories: behaviors, expectations, and tasks. The goals with these questions are to
+        understand what content the participants normally engage with through the behavioral questions, what
+        content they want to see from Future Great Comics through the expectation questions, and their
+        perceptions of Future Great Comics’ current content through the tasks. These questions were created
+        to not only reflect my four main objectives but also to embody my messaging framework I had
+        established to create my proposed social media campaign.
+      </p>
+      <ol>
+        <li>Behaviors</li>
+        <ol>
+          <li>Do you like to shop in-store? If so, why? What places do you most tend to shop in-store for?
+            If not, why? </li>
+          <li>Have you bought products from Future Great Comics before? What did you buy? Why did you buy
+            it? What encourages you to buy products from Future Great Comics? How could this be
+            incorporated into their social media campaign?</li>
+          <li>What are some of your interests that may be considered nerdy/niche? (Ex. anime, video games,
+            comics, etc.) Which ones are the most current, and why? Do you follow any social media
+            accounts related to that interest? Do you buy items related to those interests?</li>
+          <li>Which platforms do you use the most? What kinds of accounts do you follow on these
+            platforms? On which platforms are you most likely to follow businesses? </li>
+        </ol>
+        <br>
+        <li>Expectations</li>
+        <ol>
+          <li>If you follow Future Great Comics, what kind of posts do you most enjoy, and why? Which
+            posts are the most engaging (if any)?</li>
+          <li>For what purpose do you (or would you) use Future Great Comics’ social media accounts?</li>
+          <li>What kinds of posts seem to be missing from these accounts? What kinds of posts seem to be
+            posted too much from these accounts?</li>
+        </ol><br>
+        <li>Tasks</li>
+        <ol>
+          <li>Scroll through Future Great Comics’ current social media campaign until you see a post
+            featuring a product that you would buy.</li>
+          <li>Compare these four posts, two promoting products from their current campaign and two
+            promoting new products from the proposed campaign. Which ones do you find the most
+            entertaining?</li>
+          <li>Here are 10 posts. Some are from Future Great Comics’ social media campaign and others are
+            pictures taken from Google Images. Identify which posts are really from Future Great Comics
+            and which are fake.</li>
+        </ol>
+      </ol>
+      <br>
+      <h5>Participant Demographic</h5>
+      <p>These questions were asked to three participants who’ve at least viewed Future Great Comics’ social
+        media accounts, visited their store, and are familiar with their brand. All three participants are
+        Miami University students around 18-20 years old. Two participants found Future Great Comics’ social
+        media through their store, while the other participant found their social media accounts through
+        word of mouth. All participants fit the target audience since they share interests that Future great
+        Comics caters to. One of my participants is an avid comic book and graphic novel reader, another is
+        a fan of collecting manga and vinyl. All three participants play Dungeons and Dragons (D&D) and like
+        collecting dice, as well.<br>After completing these interviews, recording my participants'
+        responses, and coding their responses, I was able to validate my findings and discover more issues
+        regarding Future Great Comics’ social media presence I hadn’t yet identified.
+      </p>
+      <br>
+      <h5>Existing Readings</h5>
+      <p>Throughout the semester I was conducting this study, I was also reading and analyzing many different
+        pieces of existing literature relating to the best practices of typical social media campaigns.
+        These readings helped give context to trends I found in my research. It allowed me to define the
+        patterns that I was seeing and address probable causes and effects of them. These readings also
+        helped aid my recommendations and shape them into something that’s actually feasible for a small
+        business to achieve. <br>Thanks to these readings, my rhetorical analysis, core strategy statement
+        and messaging framework, sample social media campaign, and usability and UX research I was able to
+        gather crucial data that helped me identify some of the major trends that’s causing FGC’s low
+        engagement rates as well as craft potential recommendations in order to curate a stronger online
+        presence for Future Great Comics.
+      </p><br>
+      <h4 class="writing-content-header">Findings</h4>
+      <h5>FGC Does Not Meet Users Needs and Expectations</h5>
+      <p>As I was conducting my usability and UX research, I discovered that even though all of my
+        participants followed Future Great Comics on Instagram at one point, two of my participants had
+        recently unfollowed them while the other participant I interviewed had been considering doing the
+        same. When I inquired about why this was, most of them said their account came across as “spammy”
+        and often “clogged [their] feed.” Participant 1 argued that they post too frequently with not enough
+        substance. “Their posts are always just some picture of a comic book character or cartoon character
+        yelling at me to come into the store. It’s the same thing every day,” he said. Participant 3 on the
+        other hand said that even though they sometimes like what the shop has in store, nothing on their
+        accounts seem to particularly interest her.<br>While these findings were initially quite shocking, I
+        realized that they aligned with findings within my rhetorical analysis. One of the biggest issues
+        that could lead to followers of Future Great Comics thinking their account is “spammy” or clogs
+        their feed would be their posting frequency. They average at around 2 or 3 posts per day on both
+        platforms. Despite only starting to post actively around 2021, the Future Great Comics has over 340
+        posts. The biggest amount of posts Future Great has posted in one day (according to the three month
+        period I analyzed) is 16. These posting habits are incredibly harmful towards Future Great Comics’
+        engagement. Users could easily view Future Great Comics’ social media as “spammy” or as a nuisance
+        and be inclined to engage less or unfollow completely. This would also result in much lower reach
+        for the accounts and ultimately harm the accounts as a whole.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image1.jpg">
+        <img src="images/FGC-image2.jpg">
+        <p class="photo-caption">(These are two of the 16 posts made on Future Great Comics’ Facebook and
+          Instagram accounts on July 12, 2023.)</p>
+      </div>
+      <p>Another factor that may have contributed to these comments being made would be the actual content of
+        the posts themselves. Out of all of the 34 posts collected, 61.7% of them had the main topic of
+        their posts was discussing a current sale. These posts were also presented very much like an ad
+        rather than individual content. According to a study conducted by HubSpot, 64% of social media users
+        view ads to be annoying/disruptive and 54% believe they disrupt what they’re doing, (An, 2020).
+        Users simply don’t like looking at content they think is an ad, which is part of the reason ad
+        blockers make any profits. Due to Future Great Comics’ social media content looking so much like
+        generic ads, users can very easily start to dislike Future Great Comics’ content and choose not to
+        engage with it in hopes of receiving less of their content. <br>User needs and expectations are also
+        being failed in terms of the accessibility of Future Great Comics’ posts. According to the official
+        Web Content Accessibility Guidelines (WCAG) set by the Web Accessibility Initiative, only about
+        64.7% of the 34 posts collected are understandable by disabled viewers. All of them unfortunately
+        aren’t fully accessible to disabled viewers. This inaccessibility is due to suboptimal use of color
+        contrast and alt text in Future Great Comics’ social media posts.<br>Color contrast is the measure
+        of the difference in luminance between the foreground and background colors. It’s very important to
+        consider when relying on users to read text on an image, since it may be the one differentiating
+        factor between the text and the rest of the image, (W3C Web Accessibility Initiative, 2023). While
+        people with normal vision may be able to rely on differences in hue, many users who are low vision
+        or color blind aren’t able to distinguish certain hues from each other.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image3.png">
+        <img src="images/FGC-image4.png">
+        <p class="photo-caption">(These are all examples of posts that fail to meet contrast guidelines set
+          by WCAG.)</p>
+      </div>
+      <p>Alt text or alternate text is written copy that appears in place of an image if the image fails to
+        load on a user’s screen. This alt text is also useful for disabled users who have to rely on
+        screen-reading tools to visually describe images to them, (Becker, 2023). By excluding alt text on
+        social media posts with images, this unfortunately means that not everyone can benefit from the
+        content that Future Great Comics shares. Visually impaired users are excluded from Future Great
+        Comics’ content, which can reflect pretty negatively on their brand.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image5.jpg">
+        <img src="images/FGC-image6.jpg">
+        <p class="photo-caption">(These are all examples of posts that are inaccessible due to non-use of
+          alt-text.)</p>
+      </div>
+      <h5>FGC Does Not Circulate a Consistent Message that Accurately Reflects the Purpose and Value of the
+        Community</h5>
+      <p>One of the things that Future Great Comics is most known for is providing a place for all different
+        aspects of geek culture to come together. It serves as the meeting place for all comic book lovers,
+        TTRPG players, collectors, and many other types of people. However, this message is unfortunately
+        not well communicated over Future Great Comics’ social media pages. <br>One of the best selling
+        items in Future great Comics’ store are the dice sets. These dice are often used by board game or
+        TTRPG players. However, even though over 85% of all 34 that were analyzed focus on sales and getting
+        customers to buy items from the store, only 2.9% of the posts analyzed targeted board game and TTRPG
+        players. Their largest targeted demographic in comparison, comic book readers, have 41.2% of the 34
+        posts dedicated to them. While Levick does a great job at catering to all of these different
+        audiences in person, these social media accounts simply do not convey that. <br>During my usability
+        and UX research, I wanted to find participants who represented many different target audiences of
+        Future Great Comics. Participant 1 said that he is a Marvel fan who also likes reading graphic
+        novels. He plays D&D at least once a week with his friends, and is starting to watch more anime
+        thanks to his roommate and wants to pick up manga because of it. Participant 2 just likes to play
+        D&D and other board games but is interested in getting more into graphic novels. Participant 3
+        enjoys watching anime, reading manga, and playing video games. Some of the video games she spends
+        most time with are anime-inspired RPGs like the Persona series, Octopath Traveler, and Honkai Star
+        Rail. She also is an avid D&D player and is currently running 2 campaigns which she plays weekly.
+        <br>After inquiring about these interests, I asked if they felt like Future Great Comics was able to
+        represent and provide for them. Although Participant 1 was hesitant, all three of them disagreed.
+        Participants 2 and 3 both agreed that since they aren’t avid comic book fans, they felt no
+        connection to Future Great Comics’ social media campaign whatsoever. “It’s really a shame because I
+        love that store. Their social media just doesn’t apply to me at all,” says Participant 2.
+        Participants 2 and 3 both said that they believe that Future Great Comics social media campaigns
+        would be greatly improved if they started prioritizing content outside of comic books and superhero
+        movies, while Participant 1 argued that their content just needed to include media that’s more
+        kairotic or more recent.<br>Another issue I noticed with these posts is not only are certain
+        audiences alienated through interest groups but also by location. The posts I analyzed have a strong
+        bias towards Future Great Comics’ Oxford location over their Hamilton one. Over 58.8% of the posts
+        analyzed referred directly to the Oxford location while the only post analyzed that mentioned the
+        location in Hamilton was from 2020 before Future Great Comics even opened in Oxford. Although there
+        are still 38.2% of posts that are unclear on which location it’s referring to, users from Hamilton
+        might be doubtful that they’re referring to them based on patterns from their other posts. These
+        patterns could lead to those users feeling forgotten about or uncared for by the business.
+        Therefore, it should become practice for Future Great Comics to either start mentioning both
+        locations in their posts or perhaps create a new account centered on that location if they wish to
+        keep them separate.
+      </p><br>
+      <h5>FGC Does Not Make the Best Use of Affordances and Platforms to Showcase the Content</h5>
+      <p>When I initially asked participants about Future Great Comics’ brand aesthetic during my usability
+        and UX research, I received a lot of mixed and unsure reviews. Participant 1 mentioned that he
+        really liked the business’ brand aesthetic in-store but never noticed much of one on social media.
+        Participant 3 on the other hand seemed surprised by the question, claiming “I didn’t even know that
+        they had one!” <br>In order to test the strength of Future Great Comics’ brand aesthetic, one of my
+        tasks required participants to look at 10 posts. Of these 10 posts, 5 of them were posts from the
+        official Future Great Comics account while the other 5 were fake posts constructed using random
+        photos from Google Images. The average score for all three participants was 46.7% posts guessed
+        correctly. Participant 1 guessed 7/10 correctly, Participant 2 guessed 4/10, and Participant 3
+        guessed 3/10. Participants 2 and 3 both struggled throughout the task. Participant 2 claimed that
+        this task was “nearly impossible” since the posts “all looked like stock images anyway.” Participant
+        1 on the other hand struggled at first but eventually developed a strategy near the end that allowed
+        him to guess 5 correctly in a row. When I asked him about his strategy, he said that “the fact that
+        [Future Great Comics] would never post images with high quality and good artistic composition” was
+        what helped him succeed.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image7.jpg">
+        <img src="images/FGC-image8.jpg">
+        <img src="images/FGC-image9.jpg">
+        <img src="images/FGC-image10.jpg">
+        <p class="photo-caption">(These are 4 examples pulled from the task I had my participants complete.
+          The two images on the left are real posts from Future Great Comics’ social media while the two
+          images on the right are pulled from Google.)</p>
+      </div>
+      <p>These results aligned with the results of my own research within my rhetorical analysis. I noticed
+        when analyzing their accounts’ post layouts, there was barely any cohesion seen at all. While the
+        posts individually might manage to give a clearer idea to any viewer on what audiences Future Great
+        Comics serves and what their store is all about, they lack any cohesion or sense once viewed
+        altogether. There's nothing about this feed that tells the viewer about Future Great Comics’
+        individuality. There’s nothing that gets them to correlate these images with Future Great Comics
+        specifically or convince them to come inside to their physical store rather than purchase their
+        comics or dice online.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image11.jpg">
+        <img src="images/FGC-image12.jpg">
+        <img src="images/FGC-image13.jpg">
+        <p class="photo-caption">(On the left are 6 of the 34 posts pulled from Future Great Comics’
+          Instagram and Facebook pages. They all look like stock photos. On the right are results that I
+          found from searching the key terms shown on the posts, proving that they were sourced from
+          Google.)</p>
+      </div>
+      <p>Not to mention, I discovered during my research that a large number of their posts were in fact just
+        stock images pulled from Google. The first photo shown above are some of the posts I analyzed out of
+        the 34 total from Future Great Comics’ social media accounts. I suspected that a lot of them were
+        merely stock photos from Google images. I tested my theory and was able to find two of them just by
+        searching the key terms. There were others that I wasn’t even able to find after searching them, yet
+        that doesn’t change the fact that I still suspected they were stock photos. <br>Future Great Comics
+        has accounts on Instagram, Facebook, and Twitter/X. It became quickly apparent after analyzing their
+        presence on all three, that these platforms were all being misused. Starting with Instagram and
+        Facebook, Future Great Comics’ Instragam and Facebook content are nearly identical.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image14.jpg">
+        <img src="images/FGC-image15.jpg">
+        <p class="photo-caption">(These are two identical posts with the same photo and caption on Future
+          Great Comics’ Facebook and Instagram pages. They were posted on the same day, within the same
+          hour.)</p>
+      </div>
+      <p>Analytics have found that using the same post on multiple platforms actually lowers engagement,
+        (Abimbola, 2023). Users could get the impression that Future Great Comics isn’t taking the time to
+        fully engage with their audience and their content isn’t as genuine. Dedicated followers who follow
+        Future Great Comics on multiple platforms could start to get bored of the content or even feel
+        cheated by it, leading them to not engage as much or simply unfollow. This can also lead to certain
+        posts being made that don’t favor each platform’s intended audience at all. Although Future Great
+        Comics is technically trying to cater to the same audience, Instagram and Facebook have completely
+        different sets of users. <br>A 2023 Instagram Engagement Report by HubSpot also notes that when it
+        comes to captions, it’s important to either have a short and concise caption with under 20 words, or
+        a longform caption with over 2,000. The captions of Future Great Comics’ posts average at around
+        27.3 words per post. There were three posts collected that had 0 captions and one post with a
+        caption of about 94 words. A lot of the captions were also rather redundant with the information
+        given. Eighteen of the posts analyzed included the store’s open hours, 11AM-7PM, in the caption and
+        five of them had the store’s address. This is already information that is included in the bios of
+        both accounts, so it doesn’t need to be repeated in the caption.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image16.jpg">
+        <p class="photo-caption">(This a screenshot of a post from Future Great Comics’ Twitter account. It
+          features both the store’s open hours and address in the caption.)</p>
+      </div>
+      <p>The use of hashtags is incredibly inconsistent, if present at all. Only about 58.8% of the posts
+        collected contained any kind of hashtags. The least amount of hashtags used on a single post was
+        two, while the most was 21. When it comes to Instagram, the algorithm best favors posts with no more
+        than five hashtags, (HubSpot, 2023). In terms of Facebook and Twitter, it’s recommended to only
+        include one or two, (Sadhu, 2023). Numerous studies have shown that posts using more than 10
+        hashtags can kill engagement by 68.2%, (Sadhu, 2023), so it should be a priority for Future Great
+        Comics to cut down on their hashtag usage.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image17.jpg">
+        <p class="photo-caption">(This a screenshot of the post from Future Great Comics’ Facebook Page with
+          the most amount of hashtags, which is 21.)</p>
+      </div>
+      <p>One final observation regarding Future Great Comics’ is the state of their Twitter/X account. Despite
+        two posts that were made this August, the last post made on this account was on May 6, 2020. The
+        account only has 89 followers, their bio and location are outdated and only mention the Hamilton
+        location, and the two posts made on the account this August have received 0 forms of engagement at
+        all. This account remaining in this state despite being inactive has many harmful effects for Future
+        Great Comics’ image. It could come across to users as lazy or unmotivated. New users who stumble
+        onto the account could get a lot of outdated and falsified information. It could also lead to a
+        bunch of old followers of the account feeling disappointed or thinking that Future Great Comics
+        disappeared.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image18.jpg">
+        <img src="images/FGC-image19.jpg">
+        <p class="photo-caption">(These are two of the last posts ever made on Future Great Comics’
+          Twitter/X account when it was still active. These posts were made in 2020).</p>
+      </div>
+      <p>In order to figure out which platforms Future Great Comics should be prioritizing, I turned to my
+        participants’ during my usability and UX research. All participants said that they use Instagram,
+        YouTube, and TikTok. Participant 1 said that he also uses Facebook to keep up with older relatives
+        who use it and Snapchat to message friends, while Participant 3 said that she uses Twitter/X only to
+        message friends and Twitch to watch streamers she likes. <br>When asked which platform they prefer
+        to use for following business accounts, they all agreed that Instagram was the best platform.
+        Participant 3 explained that this was because “Instagram is the platform I use the most for general
+        content. When I use TikTok it’s mostly because I specifically want to waste 3 hours of my life
+        looking at funny videos. When I use Facebook it’s because I want to check in with my relatives or
+        older friends who still use it. But when I use Instagram, it’s for a bunch of things, and that
+        includes businesses.” She also claimed that it felt weird whenever she saw businesses promoting
+        themselves on TikTok and Snapchat because she associates those platforms less with business.
+        Participant 2 on the other hand explained that she’d prefer to see business content on Instagram
+        since that platform is focused on visual content. “If a business wants to promote their products to
+        me through social media, I obviously want to see what those products are going to look like. How
+        else am I gonna know if I want to buy them? I think Instagram is the perfect place for businesses
+        because of that.”<br>These results from both my rhetorical analysis and is clear that Future Great
+        Comics should stick to their main platforms of Instagram and Facebook. Instagram has proven itself
+        to be the platform where business accounts are most welcomed by users and most likely to be followed
+        and Facebook is best for older generations who visit Future Great Comics. However, Future Great
+        Comics needs to find a way to make sure that content on both of these platforms are somehow varied,
+        so users who follow both accounts don’t get penalized. The results from this research also indicate
+        that it would be in Future Great Comics’ best interest to terminate their inactive Twitter/X
+        account. Out of the three participants I interviewed, only one of them still uses Twitter/X and they
+        claimed only to use it for messaging other friends who still use the app. Considering the frequency
+        of which their user base is dropping, there wouldn’t be much benefit for Future Great Comics if they
+        were to maintain it.
+      </p><br>
+      <h4 class="writing-content-header">RECOMMENDATIONS</h4>
+      <p>This section includes my main recommendations which seek to remedy the errors discovered in my key
+        findings in the form of a content strategy plan. My hope is that Future Great Comics is able to
+        utilize this content strategy plan for future posts and create a brand presence that circulates a
+        consistent message, meets users’ needs and expectations, and makes users feel engaged with Future
+        Great Comics’ content.</p><br>
+      <h5>Substance</h5>
+      <h6 class="writing-subheader">Audience</h6>
+      <p>Future Great Comics caters to a diverse range of audiences, reflecting the broad appeal of the
+        products they offer. Comic book readers, manga enthusiasts, and graphic novel aficionados form a
+        significant part of the customer base, drawn to the store's extensive collection of traditional and
+        contemporary titles. In addition, the store caters to tabletop role-playing game (TTRPG) players and
+        board game enthusiasts in their selling of new board games and dice sets, providing a space for them
+        to explore new game releases and engage with fellow enthusiasts. The store also appeals to action
+        figure and vinyl collectors, offering a variety of collectible items to add to their collections. As
+        a local business, the store also plays a vital role in serving the communities of Oxford, Ohio, and
+        Hamilton, Ohio. It provides a meeting place for like-minded individuals, hosts events that foster a
+        sense of community, and contribute to the local economy by offering a unique and enriching retail
+        experience for residents and visitors alike. <br>As mentioned throughout my findings, many of these
+        audiences are often left ignored when it comes to Future Great Comics’ social media posts. Future
+        Great Comics should expand their current social media campaign to target a broader range of
+        demographics beyond just comic book readers and the Oxford community. By overlooking other potential
+        audiences, the store misses out on valuable opportunities to engage with these communities.
+        Therefore, this content strategy plan hopes to not only broaden its customer reach but also create a
+        more inclusive and welcoming online space that reflects the diverse interests of their clientele.
+      </p><br>
+      <h6 class="writing-subheader">Messaging / Voice and Tone</h6>
+      <p>As highlighted in my core strategy statement and messaging framework, it is imperative for consumers
+        to depart Future Great Comics’ social media page with the impression that Future Great Comics is an
+        authoritative presence in geek culture and can fuel their passions. If users are able to believe
+        that Future Great Comics is knowledgeable in the areas that they are passionate about, then they
+        will be much more encouraged to interact with their posts and buy products from their store. They
+        will be much more trusting of Future Great Comics’ brand identity and feel much more welcome in
+        identifying with them.<br>When it comes to sharing this message, Future Great Comics should convey a
+        tone that is both lively and informative. By striking a balance between being entertaining and
+        educational, they can establish themselves as a trusted and knowledgeable source while remaining
+        relatable to its audience. This approach allows the business to engage with its followers in a
+        friendly and approachable manner, fostering a sense of trust and reliability. This ensures that
+        users can find Future Great Comics’ content fun and engaging, while also recognizing Future Great
+        Comics as an expert within geek culture.
+      </p><br>
+      <h6 class="writing-subheader">Topics/Types of Posts</h6>
+      <p>As mentioned during my findings, the main topic for a lot of Future Great Comics posts is discussing
+        a new sale, or announcing that the store is open. While this does technically serve the core
+        strategy statement and messaging framework I designed, this strategy isn’t that effective when it
+        comes to engaging users. Instead, users are much more likely to think of these posts as annoying and
+        attention-seeking. In order to truly engage audiences, Future Great Comics need to create posts with
+        added value that interests their target demographic but also lets audiences know that Future Great
+        Comics is a brand that is entertaining and informative.<br>In order to demonstrate the purpose of
+        this added value and demonstrate its format, here is a post from Future Great Comics’ current social
+        media campaign, and here is a post from my proposed social media campaign. Both posts share the same
+        goal of encouraging users to engage with the post and visit the store, and they both do so under the
+        theme of Marvel’s Loki series on Disney Plus.
+      </p><br>
+      <div class="images-container">
+        <img src="images/FGC-image20.png">
+        <img src="images/FGC-image21.png">
+        <p class="photo-caption">(The picture on the left is a post from Future Great Comics’ Instagram
+          featuring the character Miss Minutes from Loki. The picture on the right is a post from my
+          proposed social media campaign. The text on it reads: “TOP 5 INACCURACIES IN THE MCU’S LOKI
+          SERIES Here’s a list of 5 major plot details Disney completely missed from the original Loki
+          comics.” ).</p>
+      </div>
+      <p>Rather than a still image, the post from the proposed social media campaign uses an infographic
+        format to add information relevant to comic book readers and MCU fans, which are two of Future Great
+        Comics’ biggest demographics. By including a magic layer that focuses on extensive knowledge on
+        different kairotic facets of geek culture such as the Loki series or Marvel comics helps to
+        establish the business as a knowledgeable and trustworthy source within its niche. Users will be
+        much more likely to trust Future Great Comics when it comes to recommendations on what to pick up
+        next, or trust them to have stock in items that they want. This new format also not only captures
+        the audience's attention but also encourages interaction and sharing, thereby extending the reach of
+        the business's brand and message. This can lead to increased brand awareness and potential new
+        customer acquisition. Additionally, providing value through posts helps to cultivate a loyal and
+        engaged community around the business, which can ultimately translate into customer retention and
+        advocacy. Overall, implementing this new post format will provide additional value to these posts
+        which is instrumental in building a compelling and influential online presence for Future Great
+        Comics.
+      </p><br>
+      <h6 class="writing-subheader">Sources</h6>
+      <p>When it comes to developing content for posts, the work done should be completely original. Future
+        Great Comics should utilize the branding and style guide listed below when creating posts to help
+        make their account feel like one of a kind. Any curated content used should be properly credited and
+        still restructured to fit the account’s branding guidelines.</p><br>
+      <h6>Structure</h6>
+      <h6 class="writing-subheader">What forms will your content take?</h6>
+      <p>Although Instagram doesn’t prioritize one type of content over another, a 2023 Instagram Engagement
+        Report by HubSpot shows that the type of content that receives the most engagement is video, and the
+        second most are carousels. According to Hubspot, “Users spend longer watching a video or swiping
+        through a carousel than looking at one single image, and that makes it more likely to create an
+        emotional reaction,” (Hubspot, 2023). Therefore, new content should mostly take the forms of
+        carousels and videos rather than still images. These pieces of content will mostly resemble
+        infographics or short educational videos. There are a few exceptions to this which include when
+        general announcements need to be made such as the store hours changing or community events or
+        partnerships. These exceptions should then be posted as story posts rather than main posts. If the
+        information is imperative even after 24 hours, then the story post will be archived on the main
+        page, but still not published as a main post.</p><br>
+      <h6 class="writing-subheader">Which platforms should be used? What content goes where?</h6>
+      <p>The platforms that Future Great Comics should prioritize are Instagram and Facebook. The Twitter/X
+        account should be deleted. The current state of Future Great Comics’ Twitter/X only serves to damper
+        their brand. Having an inactive account with old posts that no longer serve the brand’s current
+        image can give new users a false perception of Future Great Comics’ identity as a whole.
+        Additionally, most of the target audience that would be on Twitter/X have most likely fled to other
+        apps. Since users are slowly leaving the platform, there is no need to keep the account up and
+        running. <br>Posts that deal with content that generally caters to younger audiences (for example,
+        Invincible season 2, Baldur’s Gate 3, Jiujitsu Kaizen Manga, etc.) should be reserved for Instagram
+        while posts that cater to older audiences should be reserved for Facebook. Posts that have a more
+        general audience (for example, MCU) can be posted on either platform. Posts that deal with local
+        events should be prioritized on Facebook but can also be posted on Instagram as a story post.
+      </p><br>
+      <h6>Workflow & Governance</h6>
+      <h6 class="writing-subheader">Branding and Style Guide</h6>
+      <p>Future Great Comics can easily make their posts seem more cohesive and recognizable to users by
+        utilizing this brand style guide. When infographics are posted, they should be created with this
+        main color scheme:
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image22.png" style="height:auto; width:30rem;">
+        <p class="photo-caption">(This is the official color scheme for Future Great Comics’ social media
+          content. The colors from left to right are: #ffe81f, #ffbc0f, #ff981f, #ff621f, and #d70505).
+        </p>
+      </div>
+      <p>To ensure that these colors all look balanced when they’re used together, I also established a color
+        hierarchy that establishes where and when they should be used:
+      </p><br>
+      <div class="images-container">
+        <img src="images/FGC-image23.png">
+        <p class="photo-caption">(This is the official color hierarchy for Future Great Comics’ social media
+          content. Their primary colors are: #ffe81f, white, and black. Their secondary color is: #ffbc0f.
+          Their tertiary colors are: #ff981f, #ff621f, and #d70505).</p>
+      </div>
+      <p>When following this hierarchy, the color #ffe81f should be reserved for any header text or any main
+        elements of a post. Body text should typically be white, however if white text does not provide
+        enough contrast, resort to black instead. If a secondary color is needed at all, use #ff981f.<br>
+        If any tertiary colors are needed, use #ff981f, #ff621f, #d70505, or any combination of the three.
+        When these other colors are used, they should not pull from the main color, #ffe81f, but rather only
+        be used as accents.<br>When it comes to font choice, headers should be either in the font Horizon or
+        Horizon Outline and all body text should be in DM Sans.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image24.png" style="height:auto; width:30rem;">
+      </div>
+      <p>In terms of infographic imagery, they should lean into the Star Wars aesthetic present in the logo.
+        This will help the theming of Future Great Comics’ post feel much more cohesive and professional yet
+        also fun and engaging to viewers. This means posts could feature backgrounds that show stars,
+        galaxies, or alien planets. Extra elements in these infographics can include spaceships, distant
+        planets, HUDs, and etc. <br>This branding guide also considers post accessibility to be of great
+        importance. One of things that will aid Future Great Comics the most when it comes to increasing
+        engagement will be making it so everyone is able to properly engage with their content. I would
+        suggest adding alt-text to any post made with visual content either through the caption or by using
+        the built-in alt text feature provided on all three platforms and also putting each post through a
+        color contrast checker before posting. Not only will this make it so low-vision and color blind
+        users will be able to engage with Future Great Comics’ posts, but it also makes it easier for users
+        with normal vision if they are using an older device or have different lighting within their
+        surroundings, (Digital Accessibility Office, 2023).
+      </p><br>
+      <h6 class="writing-subheader">Best Practices for Writing on the Web</h6>
+      <p>When writing captions for each platform, they should be short and concise yet still maintain the same
+        fun and informational tone. Captions that include questions for the audience or give them a chance
+        to engage are best in creating attention or sparking interest and conversation. Any post that is
+        discussing a community event, sale, or new item on the other hand should be very clear and concise
+        so users are able to obtain all necessary information.<br>Two hashtags should be included with every
+        post. HubSpot’s recommendation for hashtags is to have hashtags that fall in these main categories,
+        Location, Branded, Niche or Industry, Communities and Fandoms, or Descriptive, (HubSpot, 2023).
+        Considering Future Great Comics’ identity as a small local business and a comic shop that caters to
+        a lot of niche interests, I believe the best hashtag strategy would be to include a location-centric
+        hashtag (#Oxford, or #Hamilton), and a community/fandom-centric hashtag (#MarvelComics, #DCComics,
+        #DungeonsAndDragons, etc.) in order to emphasize the store’s locality and dedication to the passions
+        of their audiences.
+      </p>
+      <h6 class="writing-subheader">Editorial Calendar</h6>
+      <p>When it comes to remedying post frequency and the inclusion of multiple audiences, Future Great
+        Comics should develop a content calendar. This calendar will allow Future Great Comics to make sure
+        each of their audiences are equally catered to, avoid making posts that only focus on opening hours
+        and sales, and avoid coming across as “spammy” to their users.
+      </p>
+      <div class="images-container">
+        <img src="images/FGC-image25.jpg">
+        <p class="photo-caption">(This is the official color hierarchy for Future Great Comics’ social media
+          content. Their primary colors are: #ffe81f, white, and black. Their secondary color is: #ffbc0f.
+          Their tertiary colors are: #ff981f, #ff621f, and #d70505).</p>
+      </div>
+      <p>This calendar aims to cover both FaceBook and Instagram. Ideally, both the Instagram and Facebook
+        accounts would be posting daily. According to Hootsuite, the best schedule would be around 1 post a
+        day for each account. However, if that gets to be too much, settling for either 1 post a day overall
+        and alternating on which account is posting or only about 3 posts a week on both accounts should
+        suffice, (Christison, 2023). This would mean that posts would alternate each day between accounts
+        during the week (ex. Sunday would be a Facebook day, Monday an Instagram day, Tuesday a Facebook
+        day, etc.) <br>If there is an item or potential post idea that doesn’t address any of these
+        audiences but still makes sense to post to the account, it should be posted on the sale/new item
+        day. If there is another event that takes priority over that day, post it on one of the comic book
+        days. These posts should be published around late afternoon to evening (6pm - 9pm) since that’s when
+        people are usually most active, (HubSpot, 2023).
+      </p>
+      <h4 class="writing-content-header">CONCLUSION</h4>
+      <p>In summary, this content strategy plan highlights my findings from observing the current state of
+        Future Great Comics social media campaign and interviewing previous followers of their accounts. It
+        also provides detailed recommendations that hope to improve Future Great Comic’s social media
+        presence that includes developing a magic layer, utilizing more technological affordances,
+        establishing a brand style guide, and creating a weekly editorial calendar. By incorporating these
+        recommendations, Future Great Comics may see higher engagement rates and more customers within their
+        store.
+      </p><br>
+      <h4 class="writing-content-header">REFERENCES</h4>
+      <p>Abimbola, A. (2023, August 24). Should you post the same content to all social media platforms?.
+        Mauco Enterprises. https://mauconline.net/should-you-post-the-same-content-to-all-social-networks/.
+        <br><br>An, M. (2020, January 14). Why people block ads (and what it means for marketers and
+        advertisers). HubSpot Blog.
+        https://blog.hubspot.com/marketing/why-people-block-ads-and-what-it-means-for-marketers-and-advertisers?__hstc=77521994.19c2aea516f9597d11f0c463d0709762.1696697721547.1696697721547.1696697721547.1&__hssc=77521994.1.1696697721547&__hsfp=1541278333.
+        <br><br>Becker, B. (2023, July 28). Image alt text: What it is, how to write it, and why it matters
+        to Seo. HubSpot Blog.
+        https://blog.hubspot.com/marketing/image-alt-text#:~:text=Also%20called%20alt%20tags%20and,crawl%20and%20rank%20your%20website.
+        <br><br>Brook, C. (2018, June 7). Does posting more often on Instagram reduce reach?. Social Media
+        Today.
+        https://www.socialmediatoday.com/news/does-posting-more-often-on-instagram-reduce-reach-report/525082/.
+        <br><br>Blitstein, L. (2021). Comics store opens in Oxford. Oxford Observer.
+        https://oxfordobserver.org/5369/city/comics-brought-to-life-in-oxford/.
+        <br><br>Christison, C. (2023, July 6). How to make a social media posting schedule. Social Media
+        Marketing & Management Dashboard.
+        https://blog.hootsuite.com/social-media-posting-schedule/#:~:text=On%20Instagram%2C%20post%20between%203,and%205%20times%20a%20day.
+        <br><br>Decker, A. (2023, March 23). Everything you need to know about social media branding. Buffer
+        Library.
+        https://buffer.com/library/social-media-branding/#:~:text=Your%20social%20media%20branding%20gives,that%20resonates%20with%20this%20audience.
+        <br><br>Digital Accessibility Office. (2023). Top 10 Tips for Accessibility: Color Contrast.
+        https://digitalaccessibility.unc.edu/resources/top-10-tips/color-contrast/#:~:text=Color%20contrast%20impacts%20the%20readability,the%20lighting%20of%20their%20surroundings.
+        <br><br>Gomez, R. (2023, September 29). The importance of Social Media Marketing: 7 stats that prove
+        social’s role in business success. Sprout Social.
+        https://sproutsocial.com/insights/importance-of-social-media-marketing-in-business/.
+        <br><br>HubSpot. (2023). 2023 Instagram Engagement Report.
+        https://www.hubspot.com/hubfs/2023_Instagram_Engagement_Report_V2%20(1).pdf?hubs_signup-url=offers.hubspot.com%252Finstagram-engagement-report&hubs_signup-cta=Download%2520Now&hubs_offer=offers.hubspot.com%252Finstagram-engagement-report&ref=buffer.com.
+        <br><br>Martin, M. (2023, August 10). 21 social media best practices to follow in 2023. Social Media
+        Marketing & Management Dashboard. https://blog.hootsuite.com/social-media-best-practices/.
+        <br><br>Sadhu, S. (2023, September 28). Hashtag strategy guide for Social Media Platforms in 2023.
+        SocialPilot.
+        https://www.socialpilot.co/blog/hashtag-strategy#:~:text=We%20advise%20you%20to%20use,key%20activities%20throughout%20the%20network.
+        <br><br>Spilka, D. (2016). Cross-posting on social media: Should you do it?. Semrush Blog.
+        https://www.semrush.com/blog/cross-posting-on-social-media-should-you-do-it/.
+        <br><br>W3C Web Accessibility Initiative, (2023). Web Content Accessibility Guidelines 2.0.
+        https://www.w3.org/WAI/standards-guidelines/wcag/.
+      </p>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="playground-dialog">
+    <div class="dialog-header" id="playground-dialog-header">
+      <h1 class="dialog-title">PLAYGROUND.txt</h1>
+      <button class="close-button" id="close-playground-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h1>WIP</h1>
+    </div>
+  </dialog>
+
+
+  <dialog class="dialog" id="contact-dialog">
+    <div class="dialog-header" id="contact-dialog-header">
+      <h1 class="dialog-title">CONTACT.txt</h1>
+      <button class="close-button" id="close-contact-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>Let's chat!</h2>
+      <h3>Pick a channel below to reach me</h3>
+    </div>
+    <div class="contact-btns-container">
+      <a class="contact-info-btn email-btn" href="mailto:katiebarton4455@gmail.com">
+        <h3 style="color:#221e14;">EMAIL</h3>
+        <p>katiebarton4455@gmail.com</p>
+      </a>
+      <a class="contact-info-btn linkedin-btn" href="linkedin.com/in/katiebarton10">
+        <h3 style="color:#221e14;">LINKEDIN</h3>
+        <p>/in/katiebarton10</p>
+      </a>
+    </div>
+    <a class="contact-info-btn phone-btn" href="tel:6147957924">
+      <h3 style="color:#221e14;">PHONE</h3>
+      <p>+1 (614) 795-7924</p>
+    </a>
+  </dialog>
+
+  <dialog class="dialog" id="games-dialog">
+    <div class="dialog-header" id="games-dialog-header">
+      <h1 class="dialog-title">GAMES.txt</h1>
+      <button class="close-button" id="close-games-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h1>WIP</h1>
+    </div>
+  </dialog>
+
+  <dialog class="dialog" id="music-dialog">
+    <div class="dialog-header" id="music-dialog-header">
+      <h1 class="dialog-title">MUSIC.txt</h1>
+      <button class="close-button" id="close-music-dialog-btn">x</button>
+    </div>
+    <div class="music-player-content">
+      <!-- <div class="display-screen">
+        <div class="display-screen-text">
+          <h3 id="song-title">The Art of Suffering</h3>
+          <h4 id="artist-name">Dead Poet Society</h4>
+        </div>
+        <div class="soundbars">
+        </div>
+      </div>
+      <div class="music-player-button-container">
+        <button class="music-player-buttons" id="previous-btn">
+          <img src="icons/skip_previous_filled.png" alt="skip to previous">
+        </button>
+        <button class="music-player-buttons" id="stop-btn">
+          <img src="icons/stop.png" alt="stop">
+        </button>
+        <button class="music-player-buttons" id="play-btn">
+          <img src="icons/play_arrow_filled.png" alt="play">
+        </button>
+        <button class="music-player-buttons" id="pause-btn">
+          <img src="icons/pause.png" alt="pause">
+        </button>
+        <button class="music-player-buttons" id="skip-btn">
+          <img src="icons/skip_next_filled.png" alt="skip to next">
+        </button>
+      </div>
+      <div id="progress-bar"></div>
     </div> -->
+      <h1>WIP</h1>
+  </dialog>
 
-    <br><br><br><br><br><br><br><br><br><br>
-
-    <div class="block3">
-      <div class="titlecard3">
-        <h3 class="scroll-text" id="writing">Featured<br>Writing</h3>
-      </div>
-      <div class="writing-containers">
-        <div>
-          <a href="writing1.html">
-            <div class="writing-card">
-              <p class="writing-header">MAY 2025 ● 20 MIN READ ● FICTION</p>
-              <h4>Neoteric Observer and Reliable Assistant</h4>
-              <p>LOG 1.0.1_8.10.47 - 8:32 AM <br><br>I am NORA. A Neoteric Observer and Reliable Assistant. I am the
-                first in my series created by ARO Technologies to assist USER 254, a dedicated employee, in their
-                daily
-                activities as part of their recent promotion.<br><br>As per my mission statements, I am built to be
-                a
-                specialized companion. A servant. A caretaker. A friend. I will keep a log to notate</p>
-            </div>
-          </a>
-          <a href="writing2.html">
-            <div class="writing-card">
-              <p class="writing-header">MARCH 2025 ● 17 MIN READ ● FICTION</p>
-              <h4>The Moon Owes Me Twenty Bucks</h4>
-              <p>Jim woke to the sound of something thumping overhead. The noise was too sharp, too erratic, and too
-                irregular to be a fallen branch or late night traffic. For a long while, he just listened. Another
-                scuffle. Another crash. Another clang. Then, something that sounded like glass skittering across the
-                shingles.<br><br>Glancing over at the clock, he read the digits “2:43 AM” glowing faintly in the
-                gloom.
-                He sat up slowly, his arms stiff from falling asleep over his shop’s ledger earlier that evening.
-                The
-                room above his small bookshop was usually quiet. His mind raced through the possibilities—raccoons,
-                a
-                stray cat, maybe a kid pulling a prank? But as the noise continued, it felt less and less like any
-                of
-              </p>
-            </div>
-          </a>
-          <a href="writing4.html">
-            <div class="writing-card">
-              <p class="writing-header">DEC 2023 ● 31 MIN READ ● RESEARCH</p>
-              <h4>Future Great Comics: Content Strategy Plan</h4>
-              <p>Within the following content strategy plan, I will be detailing my methods of research on Future
-                Great
-                Comics’ current social media presence. This research method consisted of four major parts: a
-                rhetorical
-                analysis developed from the coding and analysis of 34 selected posts across Future Great Comics
-                social
-                media accounts, a core strategy statement and messaging framework developed in order to best
-                represent
-                the goal of these social media accounts, a small sample social media campaign developed thanks to
-                the
-                recommendations and research from the rhetorical analysis,</p>
-            </div>
-          </a>
-        </div>
-      </div>
+  <dialog class="dialog" id="photos-dialog">
+    <div class="dialog-header" id="photos-dialog-header">
+      <h1 class="dialog-title">PHOTOS.txt</h1>
+      <button class="close-button" id="close-photos-dialog-btn">x</button>
     </div>
-
-    <br><br><br>
-
-    <div class="footer">
-      <h4>Thanks for stopping by!</h4>
-      <h6 class="social-links"><a href="https://www.linkedin.com/in/katiebarton10/" class="social">Linkedin</a> / <a
-          href="mailto:katiebarton4455@gmail.com" class="social">Email</a></h6>
+    <div class="dialog-content">
+      <h1>WIP</h1>
     </div>
+  </dialog>
 
-</body>
-
-</html>
+  <div class="footer"></div>
