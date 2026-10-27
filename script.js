@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     "photos-dialog": {
-      left: 800,
-      top: 350,
+      left: 700,
+      top: 70,
       center: false
     },
 
@@ -285,3 +285,138 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// music player
+
+const tracks = [
+  {
+    title: "Plague Accomodations",
+    artist: "Thank You Scientist",
+    src: "music\Plague Accommodations.mp3"
+  },
+  {
+    title: "The Art of Suffering",
+    artist: "Dead Poet Society",
+    src: "music/Dead Poet Society - The Art Of Suffering (Official Visualizer).mp3"
+  },
+  {
+    title: "Riot",
+    artist: "lolwtfitsjake",
+    src: "music/🎵 Riot – lolwtfitsjake (Lyrics).mp3"
+  },
+  {
+    title: "What Now?",
+    artist: "KARLEE GIRL",
+    src: "music/KARLEE GIRL - what now (Official Lyric Video).mp3"
+  },
+  {
+    title: "Desperate Pleasures",
+    artist: "Boston Manor",
+    src: "music/Boston Manor - Desperate Pleasures (Lyric Video).mp3"
+  },
+  {
+    title: "Never Find My Place",
+    artist: "Poppy",
+    src: "music/Poppy - Never Find My Place (Official Audio).mp3"
+  },
+  {
+    title: "Baby Steps",
+    artist: "Quadeca",
+    src: "music/Baby steps.mp3"
+  },
+  {
+    title: "Let's Get Acquainted",
+    artist: "James the Seventh",
+    src: "music/James the Seventh - Let's Get Acquainted (Lyric Video).mp3"
+  },
+  {
+    title: "Boys",
+    artist: "ADELA",
+    src: "music/Boys.mp3"
+  },
+  {
+    title: "INFATUATION",
+    artist: "I DONT KNOW BUT THEY FOUND ME",
+    src: "music/INFATUATION - I DONT KNOW HOW BUT THEY FOUND ME.mp3"
+  }
+];
+
+let index = 0;
+let isPlaying = false;
+
+const audioPlayer = new Audio(tracks[index].src);
+
+const songTitle = document.getElementById("song-title");
+const artistName = document.getElementById("artist-name");
+const skipButton = document.getElementById("skip-btn");
+const prevButton = document.getElementById("previous-btn");
+const playButton = document.getElementById("play-btn");
+const pauseButton = document.getElementById("pause-btn");
+const stopButton = document.getElementById("stop-btn");
+const closeDialogButton = document.getElementById("close-music-dialog-btn");
+const progressFill = document.getElementById("progress-fill"); // Added progress fill selector
+
+// Update bar as the audio time shifts forward
+audioPlayer.addEventListener("timeupdate", () => {
+  if (audioPlayer.duration) {
+    const progressPercent =
+      (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    progressFill.style.width = `${progressPercent}%`;
+  }
+});
+
+// Play Button
+playButton.addEventListener("click", () => {
+  audioPlayer.play();
+  isPlaying = true;
+});
+
+// Pause Button
+pauseButton.addEventListener("click", () => {
+  audioPlayer.pause();
+  isPlaying = false;
+});
+
+// Stop Button
+stopButton.addEventListener("click", () => {
+  stopMusic();
+});
+
+// Close Dialog Button
+closeDialogButton.addEventListener("click", () => {
+  stopMusic();
+});
+
+skipButton.addEventListener("click", () => {
+  index = (index + 1) % tracks.length;
+  changeTrack();
+});
+
+prevButton.addEventListener("click", () => {
+  index = (index - 1 + tracks.length) % tracks.length;
+  changeTrack();
+});
+
+function changeTrack() {
+  songTitle.textContent = tracks[index].title;
+  artistName.textContent = tracks[index].artist;
+
+  audioPlayer.src = tracks[index].src;
+  resetProgressBar(); // Instantly clears out the old calculation state
+
+  if (isPlaying) {
+    audioPlayer.play();
+  }
+}
+
+function stopMusic() {
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+  isPlaying = false;
+  resetProgressBar(); // Instantly resets width back to zero
+}
+
+// Reset bar helper
+function resetProgressBar() {
+  progressFill.style.width = "0%";
+}

@@ -248,6 +248,11 @@ html {
   height: 53rem;
 }
 
+#photos-dialog {
+  width: 40rem;
+  height: 47.4rem;
+}
+
 .logline {
   font-weight: 800;
 }
@@ -338,6 +343,14 @@ h3 {
   background-color: #ebc882;
   height: 19rem;
   width: 70%;
+  overflow: hidden;
+}
+
+#about-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .button-column {
@@ -612,6 +625,16 @@ h5 {
   background-color: #221e14;
   height: 1rem;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid #221e14;
+}
+
+#progress-fill {
+  background-color: #efa40d;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
 }
 
 .contact-btns-container {
@@ -648,7 +671,7 @@ h5 {
 }
 
 .phone-btn {
-  width: 30rem;
+  width: 28.8rem;
   margin: 0.5rem 2rem 1rem 2rem;
 }
 
