@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "about-dialog": {
       left: 250,
-      top: 150,
+      top: 100,
       center: false
     },
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "playground-dialog": {
       left: 600,
-      top: 300,
+      top: 70,
       center: false
     },
 
