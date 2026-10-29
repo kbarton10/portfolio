@@ -8,8 +8,32 @@
   src: url(fonts/mangiola/Mangiola-Regular.ttf) format("truetype");
 }
 
+:root {
+  --primary-color: #e6d0a9;
+  --secondary-color: #eeddbf;
+  --tertiary-color: #c2ae8b;
+  --accent-color: #efa40d;
+  --accent-color-hover: #ffcb63;
+  --accent-secondary-color: #be9b60;
+  --accent-tertiary-color: #b18435;
+
+  --window-primary: #f9f2e4;
+  --window-hover: #f5ead6;
+  --window-active: #e5dccb;
+
+  --darker-primary: #221e14;
+  --darker-primary-hover: #383326;
+  --darker-primary-active: #1e1a12;
+
+  --darker-secondary: #100d07;
+
+  --close-btn-accent: #cd583a;
+  --close-btn-accent-hover: #e67255;
+  --close-btn-accent-active: #993b23;
+}
+
 body {
-  background-color: #eeddbf;
+  background-color: var(--secondary-color);
   margin: 0;
   padding: 0;
 }
@@ -25,7 +49,7 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #221e14;
+  background-color: var(--darker-primary);
 }
 
 .menu-bar-text {
@@ -36,7 +60,7 @@ html {
 .menu-bar-text span,
 .menu-os {
   display: block;
-  color: #eeddbf;
+  color: var(--secondary-color);
   text-align: center;
   padding: 0.8rem 1rem;
   text-decoration: none;
@@ -44,16 +68,16 @@ html {
 }
 
 .menu-os {
-  color: #efa40d;
+  color: var(--accent-color);
   font-weight: bolder;
 }
 
 .menu-bar-text a:hover {
-  background-color: #383326;
+  background-color: var(--darker-primary-hover);
 }
 
 .menu-bar-text a:active {
-  background-color: rgb(30, 26, 18);
+  background-color: var(--darker-primary-active);
   transform: translateY(0.1rem);
 }
 
@@ -61,7 +85,7 @@ html {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  background-color: #221e14;
+  background-color: var(--darker-primary);
 }
 
 .menu-bar-left {
@@ -73,7 +97,7 @@ html {
 }
 
 .footer {
-  background-color: #c2ae8b;
+  background-color: var(--tertiary-color);
   padding: 1rem;
   width: 100%;
   position: fixed;
@@ -92,7 +116,7 @@ html {
 #katie {
   font-family: "Lostar";
   font-size: 18rem;
-  color: #e6d0a9;
+  color: var(--primary-color);
   padding: 0;
   margin: 0;
 }
@@ -100,7 +124,7 @@ html {
 #barton {
   font-family: "Lostar";
   font-size: 23rem;
-  color: #e6d0a9;
+  color: var(--primary-color);
   padding: 0;
   margin: 0;
 }
@@ -108,7 +132,7 @@ html {
 #portfolio {
   font-family: "Mangiola";
   font-size: 7rem;
-  color: #e6d0a9;
+  color: var(--primary-color);
   padding-bottom: 4rem;
   margin: 0;
 }
@@ -153,14 +177,14 @@ html {
 }
 
 .icon-container:active .icon {
-  background-color: #e4dac9;
+  background-color: var(--secondary-color);
   transform: translateY(0.2rem);
 }
 
 .icon {
-  border: 0.1rem solid #221e14;
-  background-color: #f9f2e4;
-  box-shadow: 0.5rem 0.5rem 0 #d2bb93;
+  border: 0.1rem solid var(--darker-primary);
+  background-color: var(--window-primary);
+  box-shadow: 0.5rem 0.5rem 0 var(--tertiary-color);
   display: flex;
   justify-content: center;
   padding: 0.5rem 0;
@@ -169,7 +193,7 @@ html {
 .icon-title {
   font-family: "Roboto Mono", monospace;
   align-self: center;
-  color: #221e14;
+  color: var(--darker-primary);
   font-size: 1rem;
 }
 
@@ -177,8 +201,8 @@ html {
   border: none;
   padding: 0;
   margin: auto;
-  background-color: #f9f2e4;
-  border: 0.1rem solid #221e14;
+  background-color: var(--window-primary);
+  border: 0.1rem solid var(--darker-primary);
   z-index: 3;
   position: fixed;
   overflow-x: hidden;
@@ -200,6 +224,11 @@ html {
 }
 
 #how-to-dialog {
+  width: 30rem;
+  height: 40rem;
+}
+
+#view-dialog {
   width: 30rem;
   height: 40rem;
 }
@@ -261,8 +290,8 @@ html {
   position: sticky;
   top: 0;
   z-index: 4;
-  background-color: #e6d0a9;
-  border-bottom: 0.1rem solid #221e14;
+  background-color: var(--primary-color);
+  border-bottom: 0.1rem solid var(--darker-primary);
   height: 2.6rem;
   display: flex;
   justify-content: space-between;
@@ -295,20 +324,20 @@ html {
   font-family: "Roboto Mono", monospace;
   font-weight: 800;
   font-size: 1.3rem;
-  color: #f9f2e4;
-  background-color: #cd583a;
-  border: 0.1rem solid #221e14;
+  color: var(--window-primary);
+  background-color: var(--close-btn-accent);
+  border: 0.1rem solid var(--darker-primary);
   box-sizing: border-box;
   margin-right: 0.4rem;
 }
 
 .close-button:hover {
-  background-color: #e67255;
+  background-color: var(--close-btn-accent-hover);
   cursor: pointer;
 }
 
 .close-button:active {
-  background-color: #993b23;
+  background-color: var(--close-btn-accent-active);
   transform: translateY(0.1rem);
 }
 
@@ -324,7 +353,7 @@ h3 {
   font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
   font-weight: 400;
-  color: #be9b60;
+  color: var(--accent-secondary-color);
   margin: 0;
   padding: 0;
 }
@@ -339,8 +368,8 @@ h3 {
 }
 
 .image-placeholder {
-  border: 0.1rem solid #221e14;
-  background-color: #ebc882;
+  border: 0.1rem solid var(--darker-primary);
+  background-color: var(--accent-secondary-color);
   height: 19rem;
   width: 70%;
   overflow: hidden;
@@ -369,18 +398,18 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.1rem solid #221e14;
-  background-color: #e6d0a9;
+  border: 0.1rem solid var(--darker-primary);
+  background-color: var(--primary-color);
   padding: 0.5rem;
 }
 
 button:hover {
-  background-color: #c8ae80;
+  background-color: var(--secondary-color);
   cursor: pointer;
 }
 
 button:active {
-  background-color: #cbb388;
+  background-color: var(--tertiary-color);
   transform: translateY(0.1rem);
 }
 
@@ -388,7 +417,7 @@ p,
 .dialog-list li {
   font-family: "Roboto Mono", monospace;
   font-size: 1rem;
-  color: #221e14;
+  color: var(--darker-primary);
 }
 
 .dialog-list li {
@@ -403,12 +432,12 @@ p,
 }
 
 .skills-container {
-  border: 0.1rem solid #221e14;
+  border: 0.1rem solid var(--darker-primary);
 }
 
 .skills-header {
-  border-bottom: 0.1rem solid #221e14;
-  background-color: #e6d0a9;
+  border-bottom: 0.1rem solid var(--darker-primary);
+  background-color: var(--primary-color);
   padding: 0.5rem;
 }
 
@@ -420,14 +449,14 @@ p,
 .skills-list li {
   font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
-  color: #221e14;
+  color: var(--darker-primary);
 }
 
 .work-content-container {
-  border: 0.1rem solid #221e14;
-  box-shadow: 0.5rem 0.5rem 0 #d2bb93;
+  border: 0.1rem solid var(--darker-primary);
+  box-shadow: 0.5rem 0.5rem 0 var(--tertiary-color);
   margin: 1rem 0 1.5rem 0;
-  background-color: #f9f5ee;
+  background-color: var(--window-primary);
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -441,11 +470,11 @@ p,
 
 .work-content-container:hover {
   cursor: pointer;
-  background-color: #f8eedd;
+  background-color: var(--window-hover);
 }
 
 .work-content-container:active {
-  background-color: #e5dccb;
+  background-color: var(--window-active);
   transform: translateY(0.1rem);
 }
 
@@ -459,7 +488,7 @@ h4 {
 .info-container-description {
   font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
-  color: #be9b60;
+  color: var(--accent-secondary-color);
   font-weight: 400;
 }
 
@@ -471,18 +500,18 @@ h4 {
 }
 
 .info-container {
-  background-color: #e6d0a9;
-  border: 0.1rem solid #221e14;
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--darker-primary);
   padding: 0.4rem;
 }
 
 .info-container-tool {
-  color: #221e14;
+  color: var(--darker-primary);
 }
 
 button:hover .info-container-tool {
   text-decoration: underline;
-  color: #100d07;
+  color: var(--darker-secondary);
 }
 
 h6 {
@@ -490,7 +519,7 @@ h6 {
   margin: 2rem 0 0 0;
   padding: 0;
   font-size: 0.8rem;
-  color: #b18435;
+  color: var(--accent-tertiary-color);
   font-weight: 400;
 }
 
@@ -499,16 +528,16 @@ h5 {
   padding: 0;
   font-family: "Roboto Mono", monospace;
   font-size: 1.6rem;
-  color: #221e14;
+  color: var(--darker-primary);
   font-weight: 700;
 }
 
 .embed-link {
-  color: #b28332;
+  color: var(--accent-tertiary-color);
 }
 
 .embed-link:hover {
-  color: #f2c679;
+  color: var(--accent-color-hover);
 }
 
 .banner-img-container {
@@ -563,7 +592,7 @@ h5 {
 
 .dialog-list li {
   font-family: "Roboto Mono", monospace;
-  color: #221e14;
+  color: var(--darker-primary);
 }
 
 .c3-photo1 {
@@ -595,9 +624,13 @@ h5 {
 
 .display-screen {
   height: 4rem;
-  background: linear-gradient(to bottom, #413d34, #221e14);
-  border: 6px solid #e6d0a9;
-  box-shadow: 0 0 0 0.09rem #221e14;
+  background: linear-gradient(
+    to bottom,
+    var(--darker-primary-hover),
+    var(--darker-primary)
+  );
+  border: 6px solid var(--primary-color);
+  box-shadow: 0 0 0 0.09rem var(--darker-primary);
   padding: 1.5rem 1rem;
 }
 
@@ -616,29 +649,29 @@ h5 {
 
 #song-title {
   font-family: "Roboto Mono", monospace;
-  color: #efa40d;
+  color: var(--accent-color);
   font-weight: 600;
   font-size: 2rem;
 }
 
 #artist-name {
   font-family: "Roboto Mono", monospace;
-  color: #efa40d;
+  color: var(--accent-color);
   font-weight: 300;
   font-size: 1.2rem;
 }
 
 #progress-bar {
-  background-color: #221e14;
+  background-color: var(--darker-primary);
   height: 1rem;
   width: 100%;
   position: relative;
   overflow: hidden;
-  border: 1.5px solid #221e14;
+  border: 1.5px solid var(--darker-primary);
 }
 
 #progress-fill {
-  background-color: #efa40d;
+  background-color: var(--accent-color);
   height: 100%;
   width: 0%;
   transition: width 0.1s linear;
@@ -660,8 +693,8 @@ h5 {
   font-weight: 500;
   justify-content: center;
   align-items: center;
-  border: 0.1rem solid #221e14;
-  background-color: #e6d0a9;
+  border: 0.1rem solid var(--darker-primary);
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   margin-top: -1rem;
@@ -669,7 +702,7 @@ h5 {
 }
 
 .contact-info-btn:hover {
-  background-color: #c8ae80;
+  background-color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -705,4 +738,69 @@ h5 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.view-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.view-button {
+  width: 4rem;
+  height: 4rem;
+  border: 1.5px solid var(--darker-secondary);
+}
+
+#view-classic-btn {
+  background-color: #e6d0a9;
+}
+
+#view-classic-btn:hover {
+  background-color: #e9d5b5;
+}
+
+#view-classic-btn:active {
+  background-color: #d0b88f;
+  transform: translateY(0.1rem);
+}
+
+#view-light-btn {
+  background-color: #f8eedd;
+}
+
+#view-light-btn:hover {
+  background-color: #fef8ed;
+}
+
+#view-light-btn:active {
+  background-color: #e4dbca;
+  transform: translateY(0.1rem);
+}
+
+#view-dark-btn {
+  background-color: #221e14;
+}
+
+#view-dark-btn:hover {
+  background-color: #342e1f;
+}
+
+#view-dark-btn:active {
+  background-color: #0c0b07;
+  transform: translateY(0.1rem);
+}
+
+#view-green-btn {
+  background-color: #a9e6b0;
+}
+
+#view-green-btn:hover {
+  background-color: #c4ffcb;
+}
+
+#view-green-btn:active {
+  background-color: #90cd97;
+  transform: translateY(0.1rem);
 }

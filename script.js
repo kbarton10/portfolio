@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
       center: false
     },
 
+    "view-dialog": {
+      left: 350,
+      top: 130,
+      center: false
+    },
+
     "about-dialog": {
       left: 250,
       top: 100,
@@ -292,7 +298,12 @@ const tracks = [
   {
     title: "Plague Accomodations",
     artist: "Thank You Scientist",
-    src: "music\Plague Accommodations.mp3"
+    src: "music/Plague Accommodations.mp3"
+  },
+  {
+    title: "Backstabber",
+    artist: "Ke$ha",
+    src: "music/Kesha - Backstabber (Official Audio).mp3"
   },
   {
     title: "The Art of Suffering",

@@ -18,7 +18,7 @@
       <li class="menu-bar-text menu-os">KatieOS</li>
       <li class="menu-bar-text"><a href="#">File</a></li>
       <li class="menu-bar-text"><a href="#">Edit</a></li>
-      <li class="menu-bar-text"><a href="#">View</a></li>
+      <li class="menu-bar-text"><a href="#" id="open-view-dialog-btn">View</a></li>
       <li class="menu-bar-text"><a href="#" id="open-how-to-dialog-btn">Help</a></li>
     </ul>
     <ul class="menu-bar-right">
@@ -106,8 +106,8 @@
           <img src="images/IMG_8531-dithered.jpg" id="about-image">
         </div>
         <div class="button-column">
-          <button id="open-how-to-dialog-btn">How to</button>
-          <button>Settings</button>
+          <button id="open-how-to-dialog-btn-1">How to</button>
+          <button id="open-view-dialog-btn-1">Settings</button>
           <button id="open-contact-dialog-btn-2">Contact</button>
         </div>
       </div>
@@ -1781,11 +1781,12 @@
 
   <dialog class="dialog" id="playground-dialog">
     <div class="dialog-header" id="playground-dialog-header">
-      <h1 class="dialog-title">PLAYGROUND.txt</h1>
+      <h1 class="dialog-title">PLAYGROUND.exe</h1>
       <button class="close-button" id="close-playground-dialog-btn">x</button>
     </div>
     <div class="dialog-content">
       <h2>Explore the Playground!</h2>
+      <h3>BROWSE ALL MY ASSORTED PROJECTS</h3>
       <p>Explore all the other assorted designs, passion projects, and messy experiments I've created. Click on any
         element to
         view it in another window and learn more about it!</p>
@@ -1840,7 +1841,7 @@
     </div>
     <div class="dialog-content">
       <h2>Let's chat!</h2>
-      <h3>Pick a channel below to reach me</h3>
+      <h3>PICK A CHANNEL BELOW TO REACH ME</h3>
     </div>
     <div class="contact-btns-container">
       <a class="contact-info-btn email-btn" href="mailto:katiebarton4455@gmail.com">
@@ -1860,7 +1861,7 @@
 
   <dialog class="dialog" id="games-dialog">
     <div class="dialog-header" id="games-dialog-header">
-      <h1 class="dialog-title">GAMES.txt</h1>
+      <h1 class="dialog-title">GAMES.exe</h1>
       <button class="close-button" id="close-games-dialog-btn">x</button>
     </div>
     <div class="dialog-content">
@@ -1870,14 +1871,14 @@
 
   <dialog class="dialog" id="music-dialog">
     <div class="dialog-header" id="music-dialog-header">
-      <h1 class="dialog-title">MUSIC.txt</h1>
+      <h1 class="dialog-title">MUSIC.exe</h1>
       <button class="close-button" id="close-music-dialog-btn">x</button>
     </div>
     <div class="music-player-content">
       <div class="display-screen">
         <div class="display-screen-text">
-          <h3 id="song-title">The Art of Suffering</h3>
-          <h4 id="artist-name">Dead Poet Society</h4>
+          <h3 id="song-title">Plague Accomodations</h3>
+          <h4 id="artist-name">Thank You Scientist</h4>
         </div>
         <div class="soundbars">
         </div>
@@ -1907,12 +1908,13 @@
 
   <dialog class="dialog" id="photos-dialog">
     <div class="dialog-header" id="photos-dialog-header">
-      <h1 class="dialog-title">PHOTOS.txt</h1>
+      <h1 class="dialog-title">PHOTOS.exe</h1>
       <button class="close-button" id="close-photos-dialog-btn">x</button>
     </div>
     <div class="dialog-content">
       <h2>Katie's Photo Album</h2>
-      <p>Take a sneak peak into my life and all the things I like to do outside of work</p>
+      <h3>MY LIFE OUTSIDE WORK</h3>
+      <p>Take a sneak peak into my life and all the things I like to do away from my desk!</p>
       <hr>
       <div class="playground-grid">
         <div class="playground-row">
@@ -1952,6 +1954,26 @@
         </div>
 
       </div>
+  </dialog>
+
+  <dialog class="dialog" id="view-dialog">
+    <div class="dialog-header" id="view-dialog-header">
+      <h1 class="dialog-title">VIEW.exe</h1>
+      <button class="close-button" id="close-view-dialog-btn">x</button>
+    </div>
+    <div class="dialog-content">
+      <h2>View Settings</h2>
+      <h3>ENHANCE YOUR VIEWING EXPERIENCE</h3>
+      <p>Not a fan of the color palette? Feel free to change it here:</p>
+      <div class="view-button-container">
+        <div class="view-button" id="view-classic-btn"></div>
+        <div class="view-button" id="view-dark-btn"></div>
+        <div class="view-button" id="view-light-btn"></div>
+        <div class="view-button" id="view-green-btn"></div>
+      </div>
+      <br><br>
+      <p>Feeling a different background? Take your pick:</p>
+    </div>
   </dialog>
 
   <div class="footer"></div>
