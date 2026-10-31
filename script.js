@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // STACKING
+  // stacking
 
   let highestZIndex = 1000;
 
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dialog.style.zIndex = ++highestZIndex;
   }
 
-  // POSITIONING
+  // positioning
 
   function centerDialog(dialog) {
     dialog.style.left = `${(window.innerWidth - dialog.offsetWidth) / 2}px`;
@@ -148,15 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // GLOBAL DRAGGING
+  // global dragging
 
   let draggedDialog = null;
   let draggedHeader = null;
 
   let offsetX = 0;
   let offsetY = 0;
-
-  // Start dragging
 
   document.addEventListener("mousedown", (e) => {
     const header = e.target.closest("dialog > *");
@@ -171,12 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Only allow dragging from the designated header
     if (!header.id.endsWith("-header")) {
       return;
     }
 
-    // Don't drag when clicking the close button
     if (e.target.closest(".close-button")) {
       return;
     }
@@ -200,8 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
   });
 
-  // Drag
-
   document.addEventListener("mousemove", (e) => {
     if (!draggedDialog) {
       return;
@@ -211,8 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     draggedDialog.style.top = `${e.clientY - offsetY}px`;
   });
-
-  // Stop dragging
 
   document.addEventListener("mouseup", () => {
     if (!draggedDialog) {
@@ -225,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     draggedHeader = null;
   });
 
-  // INITIALIZE DIALOGS
+  // initialize dialogs
 
   Object.entries(dialogSettings).forEach(([dialogId, settings]) => {
     const dialog = document.getElementById(dialogId);
@@ -236,25 +228,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const closeButton = document.getElementById(`close-${dialogId}-btn`);
 
-    // Find both the normal open button and numbered open buttons.
-    //
-    // Matches:
-    // open-how-to-dialog-btn
-    // open-how-to-dialog-btn-1
-    // open-how-to-dialog-btn-2
-    // open-how-to-dialog-btn-3
-    //
-    // Does NOT match unrelated IDs.
-
     const openButtons = document.querySelectorAll(
       `[id="open-${dialogId}-btn"], [id^="open-${dialogId}-btn-"]`
     );
 
-    // Initial position
-
     positionDialog(dialog, settings);
-
-    // Open buttons
 
     openButtons.forEach((openButton) => {
       openButton.addEventListener("click", () => {
@@ -266,21 +244,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Close button
-
     if (closeButton) {
       closeButton.addEventListener("click", () => {
         dialog.close();
       });
     }
 
-    // Click dialog to bring it to front
-
     dialog.addEventListener("mousedown", () => {
       bringToFront(dialog);
     });
 
-    // Open on page load
 
     if (settings.openOnLoad) {
       dialog.show();
@@ -292,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// music player
+// MUSIC PLAYER
 
 const tracks = [
   {
@@ -316,6 +289,11 @@ const tracks = [
     src: "music/🎵 Riot – lolwtfitsjake (Lyrics).mp3"
   },
   {
+    title: "Impossible",
+    artist: "Nothing But Thieves",
+    src: "music/Impossible.mp3"
+  },
+  {
     title: "What Now?",
     artist: "KARLEE GIRL",
     src: "music/KARLEE GIRL - what now (Official Lyric Video).mp3"
@@ -329,6 +307,11 @@ const tracks = [
     title: "Never Find My Place",
     artist: "Poppy",
     src: "music/Poppy - Never Find My Place (Official Audio).mp3"
+  },
+  {
+    title: "Headlock",
+    artist: "Imogen Heap",
+    src: "music/Imogen Heap - Headlock.mp3"
   },
   {
     title: "Baby Steps",
@@ -347,7 +330,7 @@ const tracks = [
   },
   {
     title: "INFATUATION",
-    artist: "I DONT KNOW BUT THEY FOUND ME",
+    artist: "I DON'T KNOW BUT THEY FOUND ME",
     src: "music/INFATUATION - I DONT KNOW HOW BUT THEY FOUND ME.mp3"
   }
 ];
@@ -365,9 +348,8 @@ const playButton = document.getElementById("play-btn");
 const pauseButton = document.getElementById("pause-btn");
 const stopButton = document.getElementById("stop-btn");
 const closeDialogButton = document.getElementById("close-music-dialog-btn");
-const progressFill = document.getElementById("progress-fill"); // Added progress fill selector
+const progressFill = document.getElementById("progress-fill"); 
 
-// Update bar as the audio time shifts forward
 audioPlayer.addEventListener("timeupdate", () => {
   if (audioPlayer.duration) {
     const progressPercent =
@@ -376,24 +358,20 @@ audioPlayer.addEventListener("timeupdate", () => {
   }
 });
 
-// Play Button
 playButton.addEventListener("click", () => {
   audioPlayer.play();
   isPlaying = true;
 });
 
-// Pause Button
 pauseButton.addEventListener("click", () => {
   audioPlayer.pause();
   isPlaying = false;
 });
 
-// Stop Button
 stopButton.addEventListener("click", () => {
   stopMusic();
 });
 
-// Close Dialog Button
 closeDialogButton.addEventListener("click", () => {
   stopMusic();
 });
@@ -413,7 +391,7 @@ function changeTrack() {
   artistName.textContent = tracks[index].artist;
 
   audioPlayer.src = tracks[index].src;
-  resetProgressBar(); // Instantly clears out the old calculation state
+  resetProgressBar(); 
 
   if (isPlaying) {
     audioPlayer.play();
@@ -424,10 +402,9 @@ function stopMusic() {
   audioPlayer.pause();
   audioPlayer.currentTime = 0;
   isPlaying = false;
-  resetProgressBar(); // Instantly resets width back to zero
+  resetProgressBar(); 
 }
 
-// Reset bar helper
 function resetProgressBar() {
   progressFill.style.width = "0%";
 }
